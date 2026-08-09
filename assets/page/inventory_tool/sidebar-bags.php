@@ -3,7 +3,7 @@
 	$topBags = bagTopLevel($db);
 ?>
 		<div class="hi-sidebar__section">
-			<div class="hi-sidebar__label">&#129523; <?= $translations['sidebar_bags_label'] ?> · <a href="/<?= $lang ?>/inventory_tool.php?action=master_data&table=bags">⚙️</a></div>
+			<div class="hi-sidebar__label">&#129523; <?= $translations['sidebar_bags_label'] ?> · <a href="/<?= $lang ?>/<?= $currentPage ?>?action=master_data&table=bags">⚙️</a></div>
 			<a href="<?= sidebarLink('unassigned') ?>" class="hi-sidebar__link<?= $vtype === 'unassigned' ? ' hi-sidebar__link--active' : '' ?>">
 				<span class="hi-sidebar__icon">❔</span><?= $translations['word_unassigned'] ?><span class="hi-sidebar__count"><?= $noBagCount ?></span>
 			</a>

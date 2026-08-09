@@ -5,8 +5,8 @@
 <?php endforeach; ?>
 <?php
 	$listCtx = listContextQuery();
-	$formTarget = 'inventory_tool.php?action=' . ($editId !== null ? 'edit&id=' . $editId : 'add') . ($listCtx !== '' ? '&' . $listCtx : '');
-	$cancelTarget = 'inventory_tool.php' . ($listCtx !== '' ? '?' . $listCtx : '');
+	$formTarget = $currentPage . '?action=' . ($editId !== null ? 'edit&id=' . $editId : 'add') . ($listCtx !== '' ? '&' . $listCtx : '');
+	$cancelTarget = $currentPage . ($listCtx !== '' ? '?' . $listCtx : '');
 ?>
 			<form method="post" action="<?= htmlspecialchars($formTarget) ?>" enctype="multipart/form-data">
 				<input type="hidden" name="id" value="<?= (int)$editId ?>">

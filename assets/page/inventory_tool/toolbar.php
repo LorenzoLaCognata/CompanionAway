@@ -1,23 +1,23 @@
-<form class="hi-toolbar" method="get" action="inventory_tool.php">
+<form class="hi-toolbar" method="get" action="<?= $currentPage ?>">
 <?php foreach (['type', 'filter', 'sort', 'view'] as $k): if (isset($_GET[$k])): ?>
 	<input type="hidden" name="<?= $k ?>" value="<?= htmlspecialchars($_GET[$k]) ?>">
 <?php endif; endforeach; ?>
 
 <?php $addItemCtx = listContextQuery(); ?>
-	<a class="btn btn--amber btn--sm" href="inventory_tool.php?action=add<?= $addItemCtx !== '' ? '&' . $addItemCtx : '' ?>"><?= $translations['toolbar_add_item'] ?></a>
+	<a class="btn btn--amber btn--sm" href="<?= $currentPage ?>?action=add<?= $addItemCtx !== '' ? '&' . $addItemCtx : '' ?>"><?= $translations['toolbar_add_item'] ?></a>
 
 	<input class="hi-input hi-toolbar__search" type="text" name="q" placeholder="<?= htmlspecialchars($translations['toolbar_search_placeholder']) ?>" value="<?= htmlspecialchars($search) ?>">
 	<button type="submit" class="btn btn--outline btn--sm" aria-label="<?= htmlspecialchars($translations['toolbar_search_aria']) ?>">🔍</button>
 
-	<a class="btn btn--sm<?= $view === 'cards' ? ' btn--dark' : ' btn--outline' ?>" href="inventory_tool.php?<?= qsExcept(['view', 'action', 'id']) ?>&view=cards"><?= $translations['toolbar_view_cards'] ?></a>
-	<a class="btn btn--sm<?= $view === 'list' ? ' btn--dark' : ' btn--outline' ?>" href="inventory_tool.php?<?= qsExcept(['view', 'action', 'id']) ?>&view=list"><?= $translations['toolbar_view_list'] ?></a>
+	<a class="btn btn--sm<?= $view === 'cards' ? ' btn--dark' : ' btn--outline' ?>" href="<?= $currentPage ?>?<?= qsExcept(['view', 'action', 'id']) ?>&view=cards"><?= $translations['toolbar_view_cards'] ?></a>
+	<a class="btn btn--sm<?= $view === 'list' ? ' btn--dark' : ' btn--outline' ?>" href="<?= $currentPage ?>?<?= qsExcept(['view', 'action', 'id']) ?>&view=list"><?= $translations['toolbar_view_list'] ?></a>
 
 	<span class="hi-filters__label"><?= $translations['toolbar_sort_label'] ?></span>
-	<a class="btn btn--sm<?= $sort === 'name' ? ' btn--dark' : ' btn--outline' ?>" href="inventory_tool.php?<?= qsExcept(['sort', 'action', 'id']) ?>&sort=<?= 'name' ?>">&#128278;</a>
-	<a class="btn btn--sm<?= $sort === 'cat' ? ' btn--dark' : ' btn--outline' ?>" href="inventory_tool.php?<?= qsExcept(['sort', 'action', 'id']) ?>&sort=<?= 'cat' ?>">&#128193;</a>
-	<a class="btn btn--sm<?= $sort === 'owner' ? ' btn--dark' : ' btn--outline' ?>" href="inventory_tool.php?<?= qsExcept(['sort', 'action', 'id']) ?>&sort=<?= 'owner' ?>">&#128100;</a>
-	<a class="btn btn--sm<?= $sort === 'loc' ? ' btn--dark' : ' btn--outline' ?>" href="inventory_tool.php?<?= qsExcept(['sort', 'action', 'id']) ?>&sort=<?= 'loc' ?>">&#127760;</a>
-	<a class="btn btn--sm<?= $sort === 'bag' ? ' btn--dark' : ' btn--outline' ?>" href="inventory_tool.php?<?= qsExcept(['sort', 'action', 'id']) ?>&sort=<?= 'bag' ?>">&#129523;</a>
+	<a class="btn btn--sm<?= $sort === 'name' ? ' btn--dark' : ' btn--outline' ?>" href="<?= $currentPage ?>?<?= qsExcept(['sort', 'action', 'id']) ?>&sort=<?= 'name' ?>">&#128278;</a>
+	<a class="btn btn--sm<?= $sort === 'cat' ? ' btn--dark' : ' btn--outline' ?>" href="<?= $currentPage ?>?<?= qsExcept(['sort', 'action', 'id']) ?>&sort=<?= 'cat' ?>">&#128193;</a>
+	<a class="btn btn--sm<?= $sort === 'owner' ? ' btn--dark' : ' btn--outline' ?>" href="<?= $currentPage ?>?<?= qsExcept(['sort', 'action', 'id']) ?>&sort=<?= 'owner' ?>">&#128100;</a>
+	<a class="btn btn--sm<?= $sort === 'loc' ? ' btn--dark' : ' btn--outline' ?>" href="<?= $currentPage ?>?<?= qsExcept(['sort', 'action', 'id']) ?>&sort=<?= 'loc' ?>">&#127760;</a>
+	<a class="btn btn--sm<?= $sort === 'bag' ? ' btn--dark' : ' btn--outline' ?>" href="<?= $currentPage ?>?<?= qsExcept(['sort', 'action', 'id']) ?>&sort=<?= 'bag' ?>">&#129523;</a>
 
 	<div class="hi-filters__group">
 		<span class="hi-filters__label">&#128193;</span>

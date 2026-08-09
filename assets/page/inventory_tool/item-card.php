@@ -3,8 +3,8 @@
 	$fullPath = $item['location_id'] !== null ? locPath($db, (int)$item['location_id']) : null;
 	$bagLbl = $item['bag_id'] !== null ? bagPath($db, (int)$item['bag_id']) : null;
 	$listCtx = listContextQuery();
-	$editUrl = 'inventory_tool.php?action=edit&id=' . (int)$item['id'] . ($listCtx !== '' ? '&' . $listCtx : '');
-	$deleteUrl = 'inventory_tool.php?action=delete&id=' . (int)$item['id'] . ($listCtx !== '' ? '&' . $listCtx : '');
+	$editUrl = $currentPage . '?action=edit&id=' . (int)$item['id'] . ($listCtx !== '' ? '&' . $listCtx : '');
+	$deleteUrl = $currentPage . '?action=delete&id=' . (int)$item['id'] . ($listCtx !== '' ? '&' . $listCtx : '');
 ?>
 				<div class="hi-card">
 					<a class="hi-card__photo" href="<?= htmlspecialchars($editUrl) ?>">

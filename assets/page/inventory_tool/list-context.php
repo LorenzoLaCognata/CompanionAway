@@ -18,7 +18,7 @@
 
 	function sidebarLink(string $type, ?int $filter = null): string {
 		$qs = qsExcept(['type', 'filter', 'action', 'id']);
-		$url = 'inventory_tool.php?type=' . urlencode($type);
+		$url = $currentPage . '?type=' . urlencode($type);
 		if ($filter !== null) {
 			$url .= '&filter=' . $filter;
 		}
