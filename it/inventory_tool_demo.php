@@ -10,26 +10,26 @@
 ?>
 
 <?php
-require_once '../assets/page/inventory_tool_demo/bootstrap.php';
-require_once '../assets/page/inventory_tool_demo/list-context.php';
+require_once __DIR__ . '/../assets/page/inventory_tool/bootstrap.php';
+require_once __DIR__ . '/../assets/page/inventory_tool/list-context.php';
 
-require_once '../assets/page/inventory_tool_demo/query-params.php';
+require_once __DIR__ . '/../assets/page/inventory_tool/query-params.php';
 ?>
 
-<?php require 'head.php'; ?>
-<?php require '../assets/page/inventory_tool_demo/header.php'; ?>
-<?php require '../assets/page/inventory_tool_demo/toolbar.php'; ?>
-<?php require '../assets/page/inventory_tool_demo/sidebar.php'; ?>
+<?php require __DIR__ . '/head.php'; ?>
+<?php require __DIR__ . '/../assets/page/inventory_tool_demo/header.php'; ?>
+<?php require __DIR__ . '/../assets/page/inventory_tool/toolbar.php'; ?>
+<?php require __DIR__ . '/../assets/page/inventory_tool/sidebar.php'; ?>
 <?php
 $action = $_GET['action'] ?? 'list';
 
 if ($action === 'add' || $action === 'edit' || $action === 'delete' || $action === 'master_data') {
-	require '../assets/page/inventory_tool_demo/locked.php';
+	require __DIR__ . '/../assets/page/inventory_tool_demo/locked.php';
 } else {
-	require '../assets/page/inventory_tool_demo/view-dispatch.php';
+	require __DIR__ . '/../assets/page/inventory_tool/view-dispatch.php';
 }
 ?>
 	</main>
 </div>
 	
-<?php require 'footer.php'; ?>
+<?php require __DIR__ . '/footer.php'; ?>
