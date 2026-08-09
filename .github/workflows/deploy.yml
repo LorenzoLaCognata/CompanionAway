@@ -27,6 +27,7 @@ jobs:
           local-dir: ./
           server-dir: ./
           dangerous-clean-slate: false
+          log-level: verbose
           exclude: |
             **/.git*
             **/.git*/**
