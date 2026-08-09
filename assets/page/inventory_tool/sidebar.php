@@ -6,8 +6,8 @@
 				<span class="hi-sidebar__icon">🏠</span><?= $translations['sidebar_all_items'] ?><span class="hi-sidebar__count"><?= $total ?></span>
 			</a>
 		</div>
-<?php require $dir . '/sidebar-categories.php'; ?>
-<?php require $dir . '/sidebar-owners.php'; ?>
-<?php require $dir . '/sidebar-locations.php'; ?>
-<?php require $dir . '/sidebar-bags.php'; ?>
+<?php require __DIR__ . '/sidebar-categories.php'; ?>
+<?php require __DIR__ . '/sidebar-owners.php'; ?>
+<?php require __DIR__ . '/sidebar-locations.php'; ?>
+<?php require __DIR__ . '/sidebar-bags.php'; ?>
 	</aside>
