@@ -14,6 +14,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Fix permissions for Docker action home
+        run: |
+          sudo mkdir -p /github/home
+          sudo chmod -R 777 /github/home
+
       - name: Upload via FTPS (explicit TLS/SSL)
         uses: airvzxf/ftp-deployment-action@v2
         with:
