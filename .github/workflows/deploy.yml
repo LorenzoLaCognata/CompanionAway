@@ -13,25 +13,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Fix permissions for Docker action home
-        run: |
-          sudo mkdir -p /github/home
-          sudo chmod -R 777 /github/home
+        with:
+          fetch-depth: 0
 
       - name: Upload via FTPS (explicit TLS/SSL)
-        uses: airvzxf/ftp-deployment-action@v2
+        uses: milanmk/actions-file-deployer@master
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local_dir: "./"
-          remote_dir: "./"
-          delete: "false"
-          max_retries: "7"
-          no_symlinks: "false"
-          ftp_ssl_allow: "true"
-          ssl_verify_certificate: "true"
-          ssl_check_hostname: "false"
-          net_persist_retries: "11"
-          net_timeout: "20s"
+          remote-protocol: "ftp"
+          remote-host: ${{ secrets.FTP_SERVER }}
+          remote-port: 21
+          remote-user: ${{ secrets.FTP_USERNAME }}
+          remote-password: ${{ secrets.FTP_PASSWORD }}
+          local-path: "."
+          remote-path: "."
+          # "full" mirrors everything; once a first successful deploy has run,
+          # you can switch this to "delta" so only changed files are uploaded
+          sync: "full"
+          # Forces explicit FTPS (AUTH TLS) on the control connection
+          ftp-options: "set ftp:ssl-allow true;"
