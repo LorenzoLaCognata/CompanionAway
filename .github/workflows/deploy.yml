@@ -13,23 +13,20 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
 
-      - name: Deploy via FTPS (explicit TLS/SSL)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Upload via FTPS (explicit TLS/SSL)
+        uses: airvzxf/ftp-deployment-action@v2
         with:
           server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          local-dir: ./
-          server-dir: ./
-          dangerous-clean-slate: false
-          log-level: verbose
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            **/node_modules/**
+          local_dir: "./"
+          remote_dir: "./"
+          delete: "false"
+          max_retries: "7"
+          no_symlinks: "false"
+          ftp_ssl_allow: "true"
+          ssl_verify_certificate: "true"
+          ssl_check_hostname: "false"
+          net_persist_retries: "11"
+          net_timeout: "20s"
