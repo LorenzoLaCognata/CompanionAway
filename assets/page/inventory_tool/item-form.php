@@ -11,10 +11,10 @@
 			<form method="post" action="<?= htmlspecialchars($formTarget) ?>" enctype="multipart/form-data">
 				<input type="hidden" name="id" value="<?= (int)$editId ?>">
 				<div class="hi-form__grid">
-<?php require $dir . '/item-form-field-basic.php'; ?>
-<?php require $dir . '/item-form-field-location.php'; ?>
-<?php require $dir . '/item-form-field-bag.php'; ?>
-<?php require $dir . '/item-form-field-photo.php'; ?>
+<?php require __DIR__ . '/item-form-field-basic.php'; ?>
+<?php require __DIR__ . '/item-form-field-location.php'; ?>
+<?php require __DIR__ . '/item-form-field-bag.php'; ?>
+<?php require __DIR__ . '/item-form-field-photo.php'; ?>
 				</div>
 				<div class="hi-form__actions">
 					<a class="btn btn--outline" href="<?= htmlspecialchars($cancelTarget) ?>"><?= $translations['action_cancel'] ?></a>

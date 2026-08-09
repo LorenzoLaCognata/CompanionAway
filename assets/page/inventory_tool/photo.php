@@ -1,5 +1,5 @@
 <?php
-require_once $dir . '/bootstrap.php';
+require_once __DIR__ . '/bootstrap.php';
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 $photo = itemPhotoBlob($db, $id);

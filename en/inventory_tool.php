@@ -10,36 +10,36 @@
 ?>
 
 <?php
-require_once $dir . '/../assets/page/inventory_tool/bootstrap.php';
-require_once $dir . '/../assets/page/inventory_tool/list-context.php';
+require_once __DIR__ . '/../assets/page/inventory_tool/bootstrap.php';
+require_once __DIR__ . '/../assets/page/inventory_tool/list-context.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['form_action'] ?? '') === 'delete_confirmed') {
-	require $dir . '/../assets/page/inventory_tool/item-delete-action.php';
+	require __DIR__ . '/../assets/page/inventory_tool/item-delete-action.php';
 }
 
-require_once $dir . '/../assets/page/inventory_tool/query-params.php';
+require_once __DIR__ . '/../assets/page/inventory_tool/query-params.php';
 
 $action = $_GET['action'] ?? 'list';
 
 if ($action === 'add' || $action === 'edit') {
-	require $dir . '/../assets/page/inventory_tool/item-form-helpers.php';
+	require __DIR__ . '/../assets/page/inventory_tool/item-form-helpers.php';
 	$formActionMode = $action;
-	require $dir . '/../assets/page/inventory_tool/item-form-state.php';
+	require __DIR__ . '/../assets/page/inventory_tool/item-form-state.php';
 
 	$photoActionError = null;
 
 	if ($itemNotFound) {
 		$errors = [];
 	} elseif ($formAction === 'save') {
-		require $dir . '/../assets/page/inventory_tool/item-form-actions.php';
+		require __DIR__ . '/../assets/page/inventory_tool/item-form-actions.php';
 	} else {
 		$errors = [];
 		if (in_array($formAction, ['refetch_photo', 'remove_photo'], true)) {
-			require $dir . '/../assets/page/inventory_tool/item-form-photo-actions.php';
+			require __DIR__ . '/../assets/page/inventory_tool/item-form-photo-actions.php';
 		}
 	}
 
-	require $dir . '/../assets/page/inventory_tool/item-form-select-options.php';
+	require __DIR__ . '/../assets/page/inventory_tool/item-form-select-options.php';
 }
 else if ($action === 'master_data') {
 	header('Location: https://companionaway.com/en/coming_soon.php');
@@ -47,10 +47,10 @@ else if ($action === 'master_data') {
 }
 ?>
 
-<?php require $dir . '/head.php'; ?>
-<?php require $dir . '/header.php'; ?>
-<?php require $dir . '/../assets/page/inventory_tool/toolbar.php'; ?>
-<?php require $dir . '/../assets/page/inventory_tool/sidebar.php'; ?>
+<?php require __DIR__ . '/head.php'; ?>
+<?php require __DIR__ . '/header.php'; ?>
+<?php require __DIR__ . '/../assets/page/inventory_tool/toolbar.php'; ?>
+<?php require __DIR__ . '/../assets/page/inventory_tool/sidebar.php'; ?>
 <?php if (isset($_GET['deleted'])): ?>
 		<div class="hi-flash hi-flash--ok"><?= $translations['flash_item_deleted'] ?></div>
 <?php endif; ?>
@@ -62,16 +62,16 @@ else if ($action === 'master_data') {
 <?php endif; ?>
 <?php
 if (($action === 'add' || $action === 'edit') && !$itemNotFound) {
-	require $dir . '/../assets/page/inventory_tool/item-form.php';
+	require __DIR__ . '/../assets/page/inventory_tool/item-form.php';
 } elseif ($action === 'edit' && $itemNotFound) {
 	echo '<div class="hi-empty"><div class="hi-empty__icon">📭</div><p>' . htmlspecialchars($translations['error_item_not_found']) . '</p></div>';
 } elseif ($action === 'delete') {
-	require $dir . '/../assets/page/inventory_tool/item-delete-confirm.php';
+	require __DIR__ . '/../assets/page/inventory_tool/item-delete-confirm.php';
 } else {
-	require $dir . '/../assets/page/inventory_tool/view-dispatch.php';
+	require __DIR__ . '/../assets/page/inventory_tool/view-dispatch.php';
 }
 ?>
 	</main>
 </div>
 	
-<?php require $dir . '/footer.php'; ?>
+<?php require __DIR__ . '/footer.php'; ?>
