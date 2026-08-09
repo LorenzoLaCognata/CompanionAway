@@ -33,6 +33,18 @@
        <priority>0.6400</priority>
   </url>
   <url>
+       <loc>https://www.companionaway.com/en/inventory_tool_demo.php</loc>
+       <lastmod>2026-08-09T00:00:01+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://www.companionaway.com/en/intake_travel.php</loc>
+       <lastmod>2026-08-09T00:00:01+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
        <loc>https://www.companionaway.com/en/travel_demo.php</loc>
        <lastmod>2026-07-13T04:33:01+00:00</lastmod>
        <changefreq>daily</changefreq>
@@ -65,6 +77,18 @@
   <url>
        <loc>https://www.companionaway.com/it/relocation_demo.php</loc>
        <lastmod>2026-07-13T04:33:01+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://www.companionaway.com/it/inventory_tool_demo.php</loc>
+       <lastmod>2026-08-09T00:00:01+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://www.companionaway.com/it/intake_travel.php</loc>
+       <lastmod>2026-08-09T00:00:01+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.5120</priority>
   </url>

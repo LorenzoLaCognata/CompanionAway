@@ -26,5 +26,5 @@ jobs:
           remote-password: ${{ secrets.FTP_PASSWORD }}
           local-path: "."
           remote-path: "/"
-          sync: "full"
+          sync: "delta"
           ftp-options: "set ftp:ssl-allow true;"
