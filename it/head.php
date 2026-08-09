@@ -12,6 +12,7 @@
 		</script>
 
 <?php
+	$dir = preg_replace('/^([^\/]*\/){2}[^\/]*/', '', __DIR__);
 	$enSlug = ($currentPage === 'index.php') ? '/' : '/en/' . $currentPage;
 	$itSlug = ($currentPage === 'index.php') ? '/it' : '/it/' . $currentPage;
 	$homeSlug = '/';
