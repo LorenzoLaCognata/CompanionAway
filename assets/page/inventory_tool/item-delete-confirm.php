@@ -7,7 +7,7 @@
 		return;
 	}
 	$listCtx = listContextQuery();
-	$returnTarget = 'inventory_tool.php' . ($listCtx !== '' ? '?' . $listCtx : '');
+	$returnTarget = $currentPage . ($listCtx !== '' ? '?' . $listCtx : '');
 ?>
 		<div class="hi-form">
 			<div class="hi-form__title"><?= $translations['delete_confirm_title'] ?></div>

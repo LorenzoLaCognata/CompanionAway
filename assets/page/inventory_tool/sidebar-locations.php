@@ -3,7 +3,7 @@
 	$places = locPlaces($db);
 ?>
 		<div class="hi-sidebar__section">
-			<div class="hi-sidebar__label">&#127760; <?= $translations['sidebar_locations_label'] ?> · <a href="/<?= $lang ?>/inventory_tool.php?action=master_data&table=locations">⚙️</a></div>
+			<div class="hi-sidebar__label">&#127760; <?= $translations['sidebar_locations_label'] ?> · <a href="/<?= $lang ?>/<?= $currentPage ?>?action=master_data&table=locations">⚙️</a></div>
 			<a href="<?= sidebarLink('location_none') ?>" class="hi-sidebar__link<?= $vtype === 'location_none' ? ' hi-sidebar__link--active' : '' ?>">
 				<span class="hi-sidebar__icon">❔</span><?= $translations['word_unassigned'] ?><span class="hi-sidebar__count"><?= $noLocationCount ?></span>
 			</a>

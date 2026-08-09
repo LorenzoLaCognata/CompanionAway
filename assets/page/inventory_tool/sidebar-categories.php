@@ -3,7 +3,7 @@
 	$categories = catAll($db);
 ?>
 		<div class="hi-sidebar__section">
-			<div class="hi-sidebar__label">&#128193; <?= $translations['sidebar_categories_label'] ?> · <a href="/<?= $lang ?>/inventory_tool.php?action=master_data&table=categories">⚙️</a></div>
+			<div class="hi-sidebar__label">&#128193; <?= $translations['sidebar_categories_label'] ?> · <a href="/<?= $lang ?>/<?= $currentPage ?>?action=master_data&table=categories">⚙️</a></div>
 			<a href="<?= sidebarLink('category_none') ?>" class="hi-sidebar__link<?= $vtype === 'category_none' ? ' hi-sidebar__link--active' : '' ?>">
 				<span class="hi-sidebar__icon">❔</span><?= $translations['word_unassigned'] ?><span class="hi-sidebar__count"><?= $uncategorizedCount ?></span>
 			</a>
