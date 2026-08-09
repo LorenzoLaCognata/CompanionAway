@@ -1,0 +1,138 @@
+<?php
+	$lang = basename(__DIR__);
+	$currentPage = basename(__FILE__);
+	
+	$langJson = file_get_contents('intake_relocation/lang.json');
+	$translations = json_decode($langJson, true);
+
+	// REVIEW TO OPTIMIZE
+	$pageStylesheet = '/assets/css/style.css';
+?>
+
+<?
+
+	session_start();
+
+	$i = isset($_GET['step']) ? (int) $_GET['step'] : 1;
+	
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+		$action = $_POST['action'] ?? 'next';
+
+		if ($i === 1) {
+			$fields = ['firstName', 'lastName', 'email', 'phone', 'currentLocation'];
+		}
+		else if ($i === 2) {
+			$fields = ['movingFrom','movingTo','arrivalDate','dateCertainty','whoRelocating','reloLang','reloWorries','reloExtra'];
+		}
+		else if ($i === 3) {
+			$fields = ['howFound','finalNotes'];
+		}
+		
+		foreach ($fields as $field) {
+			if (isset($_POST[$field])) {
+				$_SESSION['data'][$field] = trim($_POST[$field]);
+			}
+		}
+		
+		if ($i === 2) {
+			if (isset($_POST['reloTopics']) && is_array($_POST['reloTopics'])) {
+				$_SESSION['data']['reloTopics'] = $_POST['reloTopics'];
+			}
+		}
+
+		if ($action === 'next') {
+			header('Location: ' . $currentPage . '?step=' . ($i+1));
+			exit;
+		} elseif ($action === 'prev') {
+			header('Location: ' . $currentPage . '?step=' . ($i-1));
+			exit;
+		} elseif ($action === 'submit') {
+			
+			if (empty($_POST['website'])) {
+				$to = 'companionaway@altervista.org';
+				$subject = 'Companion Away - Nuovo Trasferimento: ' . $_SESSION['data']['firstName'] . ' ' . $_SESSION['data']['lastName'];
+				$body = "Nuova richiesta di supporto ricevuta:\n\n";
+				$body .= '- Name: ' . $_SESSION['data']['firstName'] . ' ' . $_SESSION['data']['lastName'] . "\n";
+				$body .= '- Email: ' . $_SESSION['data']['email'] . "\n";
+				$body .= '- Phone: ' . $_SESSION['data']['phone'] . "\n";
+				$body .= '- Current Location: ' . $_SESSION['data']['currentLocation'] . "\n";
+				$body .= '- Moving From: ' . $_SESSION['data']['movingFrom'] . "\n";
+				$body .= '- Moving To: ' . $_SESSION['data']['movingTo'] . "\n";
+				$body .= '- Arrival Date: ' . $_SESSION['data']['arrivalDate'] . "\n";
+				$body .= '- Certainty: ' . $_SESSION['data']['dateCertainty'] . "\n";
+				$body .= '- Who: ' . $_SESSION['data']['whoRelocating'] . "\n";
+				$body .= '- Topics: ' . checked_labels($_SESSION['data'], 'reloTopics', $translations) . "\n";
+				$body .= '- Worries: ' . $_SESSION['data']['reloWorries'] . "\n";
+				$body .= '- Extra: ' . $_SESSION['data']['reloExtra'] . "\n";
+				$body .= '- How Found: ' . $_SESSION['data']['howFound'] . "\n";
+				$body .= '- Final Notes: ' . $_SESSION['data']['finalNotes'] . "\n";
+				$headers = 'From: companionaway@altervista.org' . "\r\n" .
+					'Reply-To: ' . $_SESSION['data']['email'] . "\r\n" .
+					'Cc: giulia.carla20@gmail.com' . "\r\n" .
+					'Content-Type: text/plain; charset=UTF-8';
+				$sent = mail($to, $subject, $body, $headers);
+			}
+			
+			if ($sent) {
+				unset($_SESSION['data']);
+				header('Location: ' . $currentPage . '?step=' . ($i+1));
+				exit;
+			}
+		}
+		
+	}
+	
+	function is_checked($key, $value): bool {
+		$stored = $_SESSION['data'][$key] ?? [];
+		return is_array($stored) && in_array($value, $stored, true);
+	}
+
+	function checked_labels(array $data, string $key, array $translations): string {
+		$labels = [];
+		foreach ($data[$key] ?? [] as $code) {
+			$labels[] = match ($code) {
+				'housing' => $translations['relo_topic_housing'],
+				'ssn' => $translations['relo_topic_ssn'],
+				'bank' => $translations['relo_topic_bank'],
+				'licence' => $translations['relo_topic_licence'],
+				'health' => $translations['relo_topic_health'],
+				'community' => $translations['relo_topic_community'],
+				'inventory' => $translations['relo_topic_inventory'],
+				'school' => $translations['relo_topic_school'],
+				'pets' => $translations['relo_topic_pets'],
+				'shipping' => $translations['relo_topic_shipping'],
+				'language' => $translations['relo_topic_language'],
+				'jobsearch' => $translations['relo_topic_jobsearch'],
+				'other_relo' => $translations['relo_topic_other'],
+				default => null,
+			};
+		}
+		return implode('<br>', array_filter($labels));
+	}
+?>
+
+<?php include 'head.php'; ?>
+
+<?php include 'header.php'; ?>
+
+<?php include '../assets/page/intake_relocation/hero.php'; ?>
+
+<?php include '../assets/page/intake_relocation/intake_steps.php'; ?>
+		
+			<div class="intake-form-container">
+
+<?php
+	switch ($i) {
+	  case 1: include('../assets/page/intake_relocation/relocation_1.php'); break;
+	  case 2: include('../assets/page/intake_relocation/relocation_2.php'); break;
+	  case 3: include('../assets/page/intake_relocation/relocation_3.php'); break;
+	  case 4: include('../assets/page/intake_relocation/relocation_4.php'); break;
+	  case 5: include('../assets/page/intake_relocation/relocation_5.php'); break;
+	  default: break;
+	}
+?>
+
+			</div>
+
+<?php include 'footer.php'; ?>

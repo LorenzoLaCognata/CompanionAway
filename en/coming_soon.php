@@ -3,7 +3,7 @@
 	$currentPage = 'coming_soon.php';
 ?>
 
-<?php include 'head.php'; ?>
+<?php include 'standard_head.php'; ?>
 
 <?php include 'header.php'; ?>
 

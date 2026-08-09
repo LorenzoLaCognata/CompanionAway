@@ -46,6 +46,32 @@
 			});
 		</script>
 
+		<script>
+			function tick(el) {
+				el.classList.toggle('done');
+				updateProgress();
+			}
+			function updateProgress() {
+				const all  = document.querySelectorAll('.check-item');
+				const done = document.querySelectorAll('.check-item.done');
+				const pct  = all.length ? (done.length / all.length) * 100 : 0;
+				const bar  = document.getElementById('prog');
+				if (bar) bar.style.width = pct + '%';
+			}
+		</script>
+
+		<script>
+			function showTab(id, btn) {
+				document.querySelectorAll(".guide-panel").forEach(p => p.classList.remove("active"));
+				document.querySelectorAll(".gt").forEach(b => b.classList.remove("active"));
+				document.getElementById("tab-" + id).classList.add("active");
+				btn.classList.add("active");
+			}
+			function toggleFaq(btn) {
+				btn.parentElement.classList.toggle("open");
+			}
+		</script>
+
 	</body>
 
 </html>
