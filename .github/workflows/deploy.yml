@@ -25,9 +25,6 @@ jobs:
           remote-user: ${{ secrets.FTP_USERNAME }}
           remote-password: ${{ secrets.FTP_PASSWORD }}
           local-path: "."
-          remote-path: "."
-          # "full" mirrors everything; once a first successful deploy has run,
-          # you can switch this to "delta" so only changed files are uploaded
+          remote-path: "/"
           sync: "full"
-          # Forces explicit FTPS (AUTH TLS) on the control connection
           ftp-options: "set ftp:ssl-allow true;"
