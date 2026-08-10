@@ -3,7 +3,10 @@
 		<header class="site-header">
 
 			<div class="top-bar">
-				<p class="top-bar-text"><?= $translations['header_banner_text'] ?></p>
+				<div class="top-bar-left">
+					<a href="<?= $homeSlug ?>" class="top-bar-back" aria-label="&#129044; <?= $translations['header_back_label'] ?>"></a>
+					<p class="top-bar-text"><?= $translations['header_banner_text'] ?></p>
+				</div>
 				<a href="/<?= $lang ?>/travel.php" class="top-bar-cta"><?= $translations['header_banner_cta'] ?></a>
 			</div>
 
