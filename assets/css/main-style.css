@@ -126,15 +126,14 @@
   --font-body:    'DM Sans', 'Helvetica Neue', sans-serif;
 
   /* Type scale */
-  --text-xxs:  10px;
-  --text-xs:   11px;
-  --text-sm:   13px;
-  --text-base: 14px;
-  --text-md:   16px;
-  --text-lg:   22px;
-  --text-xl:   34px;
-  --text-2xl:  44px;
-  --text-3xl:  58px;
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-md:   18px;
+  --text-lg:   24px;
+  --text-xl:   36px;
+  --text-2xl:  46px;
+  --text-3xl:  60px;
 
   /* Spacing (8-pt grid) */
   --space-1:   4px;
@@ -372,7 +371,7 @@ h3 { font-size: var(--text-lg);  }
 
 .nav-logo__wordmark {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: var(--text-md);
   font-style: italic;
   font-weight: 500;
   color: var(--navy);
@@ -420,7 +419,7 @@ h3 { font-size: var(--text-lg);  }
 .nav-lang__option {
   cursor: pointer;
   opacity: .45;
-  font-size: var(--text-xxs);
+  font-size: var(--text-xs);
   transition: opacity var(--ease);
 }
 .nav-lang__option:hover,
@@ -514,7 +513,7 @@ h3 { font-size: var(--text-lg);  }
   }
 
   .nav-logo__wordmark {
-    font-size: 17px;
+    font-size: var(--text-md);
   }
 }
 
@@ -598,7 +597,7 @@ h3 { font-size: var(--text-lg);  }
 
 .footer__logo {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: var(--text-md);
   font-style: italic;
   color: var(--amber);
   text-decoration: none;
