@@ -1222,6 +1222,32 @@ h3 { font-size: var(--text-lg);  }
   z-index: 100;
 }
 
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.top-bar-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: #fff;
+  transition: background var(--ease);
+}
+
+.top-bar-back svg {
+  width: 17px;
+  height: 17px;
+}
+
+.top-bar-back:hover { background: rgba(255, 255, 255, .18); }
+
 .top-bar-text {
   font-size: var(--text-sm);
   color: #fff;
