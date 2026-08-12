@@ -690,3 +690,16 @@ h3 { font-size: var(--text-lg);  }
     padding: var(--space-5);
   }
 }
+
+.pc-price-block {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.pc-was {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  text-decoration: line-through;
+}

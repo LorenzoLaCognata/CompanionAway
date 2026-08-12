@@ -40,8 +40,8 @@
 		<link rel="icon" type="image/png" sizes="48x48" href="/favicon.ico">
 
 		<link rel="stylesheet" href="/assets/css/main-style.min.css">
-<?php if ($pageStylesheet) { ?>
-		<link rel="stylesheet" href="<?= $pageStylesheet ?>">
+<?php foreach ((array) $pageStylesheet as $sheet) { ?>
+		<link rel="stylesheet" href="<?= $sheet ?>">
 <?php } ?>
 
 	</head>
