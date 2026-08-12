@@ -1,0 +1,30 @@
+name: Deploy to Staging via FTPS
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  ftp-deploy:
+    name: Deploy PHP site (staging)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Upload via FTPS (explicit TLS/SSL)
+        uses: milanmk/actions-file-deployer@master
+        with:
+          remote-protocol: "ftp"
+          remote-host: ${{ secrets.FTP_SERVER_STAGING }}
+          remote-port: 21
+          remote-user: ${{ secrets.FTP_USERNAME_STAGING }}
+          remote-password: ${{ secrets.FTP_PASSWORD_STAGING }}
+          local-path: "."
+          remote-path: "/"
+          sync: "delta"
+          ftp-options: "set ftp:ssl-allow true;"
