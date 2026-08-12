@@ -16,9 +16,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Block search engines on staging
-        run: printf 'User-agent: *\nDisallow: /\n' > robots.txt
-
       - name: Upload via FTPS (explicit TLS/SSL)
         uses: milanmk/actions-file-deployer@master
         with:
