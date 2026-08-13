@@ -16,6 +16,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build minified CSS
+        run: |
+          npm install -g clean-css-cli
+          for f in main-style home-style travel-relocation-style document-style shared-demo intake-style inventory-style; do
+            cleancss -o "assets/css/${f}.min.css" "assets/css/${f}.css"
+          done
+
       - name: Upload via FTPS (explicit TLS/SSL)
         uses: milanmk/actions-file-deployer@master
         with:
