@@ -5,7 +5,7 @@
 	$langJson = file_get_contents('relocation/lang.json');
 	$translations = json_decode($langJson, true);
 
-	$pageStylesheet = '/assets/css/travel-relocation-style.css';
+	$pageStylesheet = '/assets/css/travel-relocation-style.min.css';
 ?>
 
 <?php include 'head.php'; ?>

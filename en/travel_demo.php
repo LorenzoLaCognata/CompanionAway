@@ -6,8 +6,8 @@
 	$translations = json_decode($langJson, true);
 
 	$pageStylesheet = [
-		'/assets/css/shared-demo.css',
-		'/assets/css/document-style.css'
+		'/assets/css/shared-demo.min.css',
+		'/assets/css/document-style.min.css'
 	];
 ?>
 

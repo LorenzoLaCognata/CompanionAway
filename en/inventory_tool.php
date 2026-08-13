@@ -5,7 +5,7 @@
 	$langJson = file_get_contents('inventory_tool/lang.json');
 	$translations = json_decode($langJson, true);
 
-	$pageStylesheet = '/assets/css/inventory-style.css';
+	$pageStylesheet = '/assets/css/inventory-style.min.css';
 ?>
 
 <?php

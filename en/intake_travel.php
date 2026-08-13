@@ -5,7 +5,7 @@
 	$langJson = file_get_contents('intake_travel/lang.json');
 	$translations = json_decode($langJson, true);
 
-	$pageStylesheet = '/assets/css/intake-style.css';
+	$pageStylesheet = '/assets/css/intake-style.min.css';
 ?>
 
 <?
