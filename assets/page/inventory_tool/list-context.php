@@ -1,10 +1,11 @@
 <?php
 	function qsExcept(array $except): string {
 		$params = $_GET;
+		unset($params['saved']);
 		foreach ($except as $key) unset($params[$key]);
 		return http_build_query($params);
 	}
-
+	
 	function listContextQuery(): string {
 		$keys = ['type', 'filter', 'q', 'sort', 'view', 'fcat', 'fowner', 'floc', 'fbag'];
 		$params = [];
