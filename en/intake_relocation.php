@@ -5,8 +5,7 @@
 	$langJson = file_get_contents('intake_relocation/lang.json');
 	$translations = json_decode($langJson, true);
 
-	// REVIEW TO OPTIMIZE
-	$pageStylesheet = '/assets/css/style.css';
+	$pageStylesheet = '/assets/css/intake-style.min.css';
 ?>
 
 <?

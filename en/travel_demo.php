@@ -5,8 +5,10 @@
 	$langJson = file_get_contents('travel_demo/lang.json');
 	$translations = json_decode($langJson, true);
 
-	// REVIEW TO OPTIMIZE
-	$pageStylesheet = '/assets/css/style.css';
+	$pageStylesheet = [
+		'/assets/css/shared-demo.min.css',
+		'/assets/css/document-style.min.css'
+	];
 ?>
 
 <?php include 'head.php'; ?>
