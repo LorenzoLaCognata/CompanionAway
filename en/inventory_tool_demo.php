@@ -5,8 +5,10 @@
 	$langJson = file_get_contents('inventory_tool_demo/lang.json');
 	$translations = json_decode($langJson, true);
 
-	// REVIEW TO OPTIMIZE
-	$pageStylesheet = '/assets/css/style.css';
+	$pageStylesheet = [
+		'/assets/css/shared-demo.min.css',
+		'/assets/css/inventory-style.min.css'
+	];
 ?>
 
 <?php
