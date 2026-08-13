@@ -27,4 +27,5 @@ jobs:
           local-path: "."
           remote-path: "/"
           sync: "delta"
+          sync-delta-excludes: ':!private/config.php'
           ftp-options: "set ftp:ssl-allow true;"
