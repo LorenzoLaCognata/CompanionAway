@@ -23,9 +23,9 @@ jobs:
 
       - name: Build minified CSS
         run: |
-          npm install -g clean-css-cli
+          npm install -g lightningcss-cli
           for f in main-style home-style travel-relocation-style document-style shared-demo intake-style inventory-style; do
-            cleancss -o "assets/css/${f}.min.css" "assets/css/${f}.css"
+            lightningcss --minify --output-file "assets/css/${f}.min.css" "assets/css/${f}.css"
           done
 
       - name: Upload via FTPS (explicit TLS/SSL)
@@ -39,4 +39,5 @@ jobs:
           local-path: "."
           remote-path: "/"
           sync: "delta"
+          sync-delta-includes: "assets/css/main-style.min.css,assets/css/home-style.min.css,assets/css/travel-relocation-style.min.css,assets/css/document-style.min.css,assets/css/shared-demo.min.css,assets/css/intake-style.min.css,assets/css/inventory-style.min.css"
           ftp-options: "set ftp:ssl-allow true;"
