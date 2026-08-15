@@ -1,8 +1,9 @@
 		</main>
 
 <?php
+	$footerLangJson = file_get_contents(__DIR__ . '/footer/lang.json');
 	$cookieConsentLangJson = file_get_contents(__DIR__ . '/cookie_consent/lang.json');
-	$translations = array_merge($translations ?? [], json_decode($cookieConsentLangJson, true) ?? []);
+	$translations = array_merge($translations ?? [], json_decode($footerLangJson, true) ?? [], json_decode($cookieConsentLangJson, true) ?? []);
 ?>
 
 		<footer class="site-footer">
@@ -11,16 +12,16 @@
 
 				<nav class="footer__nav" aria-label="Footer navigation">
 					<ul role="list">
-						<li><a href="/<?= $lang ?>/relocation.php">Trasferimento</a></li>
+						<li><a href="/<?= $lang ?>/relocation.php"><?= $translations['footer_nav_relocation'] ?></a></li>
 					</ul>
 					<ul role="list">
-						<li><a href="/<?= $lang ?>/travel.php">Viaggio</a></li>
+						<li><a href="/<?= $lang ?>/travel.php"><?= $translations['footer_nav_travel'] ?></a></li>
 					</ul>
 					<ul role="list">
-						<li><a href="/<?= $lang ?>/terms.php">Termini e Condizioni</a></li>
+						<li><a href="/<?= $lang ?>/terms.php"><?= $translations['footer_nav_terms'] ?></a></li>
 					</ul>
 					<ul role="list">
-						<li><a href="/<?= $lang ?>/contact.php">Contatti</a></li>
+						<li><a href="/<?= $lang ?>/contact.php"><?= $translations['footer_nav_contact'] ?></a></li>
 					</ul>
 					<ul role="list">
 						<li><button type="button" class="footer-cc-trigger" id="cookieSettingsLink"><?= $translations['cc_footer_link'] ?></button></li>
@@ -30,8 +31,8 @@
 			</div>
 
 			<div class="footer__bottom">
-				<p>&copy; <?= date('Y') ?> Companion Away . All rights reserved.</p>
-				<p class="footer__note">Non generato dall'AI. Ogni piano è creato su misura.</p>
+				<p>&copy; <?= date('Y') ?> Companion Away . <?= $translations['footer_copyright'] ?></p>
+				<p class="footer__note"><?= $translations['footer_note'] ?></p>
 			</div>
 			
 		</footer>
