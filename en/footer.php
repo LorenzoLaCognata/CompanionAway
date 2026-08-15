@@ -1,7 +1,7 @@
 		</main>
 
 <?php
-	$cookieConsentLangJson = file_get_contents('cookie_consent/lang.json');
+	$cookieConsentLangJson = file_get_contents('en/cookie_consent/lang.json');
 	$translations = array_merge($translations, json_decode($cookieConsentLangJson, true));
 ?>
 
