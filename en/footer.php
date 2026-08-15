@@ -1,5 +1,10 @@
 		</main>
 
+<?php
+	$cookieConsentLangJson = file_get_contents('cookie_consent/lang.json');
+	$translations = array_merge($translations, json_decode($cookieConsentLangJson, true));
+?>
+
 		<footer class="site-footer">
 		
 			<div class="footer__inner">
@@ -17,6 +22,9 @@
 					<ul role="list">
 						<li><a href="/<?= $lang ?>/contact.php">Contact</a></li>
 					</ul>
+					<ul role="list">
+						<li><button type="button" class="footer-cc-trigger" id="cookieSettingsLink"><?= $translations['cc_footer_link'] ?></button></li>
+					</ul>
 				</nav>
 
 			</div>
@@ -27,6 +35,10 @@
 			</div>
 			
 		</footer>
+
+<?php include '../assets/page/cookie_consent/banner.php'; ?>
+
+<?php include '../assets/page/cookie_consent/modal.php'; ?>
 
 		<script>
 			const burger = document.querySelector('.nav-burger');
@@ -74,6 +86,119 @@
 			function toggleFaq(btn) {
 				btn.parentElement.classList.toggle("open");
 			}
+		</script>
+
+		<script>
+			(function () {
+				var COOKIE_NAME = 'ca_consent';
+				var GA_ID = 'G-2KTKK3SNWY';
+
+				function getConsent() {
+					var match = document.cookie.match(new RegExp('(?:^|; )' + COOKIE_NAME + '=([^;]*)'));
+					if (!match) return null;
+					try {
+						return JSON.parse(decodeURIComponent(match[1]));
+					} catch (e) {
+						return null;
+					}
+				}
+
+				function setConsent(functional, analytics) {
+					var value = {
+						essential: true,
+						functional: !!functional,
+						analytics: !!analytics,
+						marketing: false,
+						ts: Date.now()
+					};
+					document.cookie = COOKIE_NAME + '=' + encodeURIComponent(JSON.stringify(value)) + ';path=/;max-age=' + (60 * 60 * 24 * 365) + ';SameSite=Lax';
+					return value;
+				}
+
+				function loadAnalytics() {
+					if (window.__caAnalyticsLoaded || typeof gtag !== 'function') return;
+					window.__caAnalyticsLoaded = true;
+					var s = document.createElement('script');
+					s.async = true;
+					s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+					document.head.appendChild(s);
+					gtag('consent', 'update', { analytics_storage: 'granted' });
+					gtag('config', GA_ID);
+				}
+
+				var banner   = document.getElementById('cookieBanner');
+				var overlay  = document.getElementById('cookieModalOverlay');
+				var fnToggle = document.getElementById('cookieToggleFunctional');
+				var anToggle = document.getElementById('cookieToggleAnalytics');
+
+				function showBanner() { if (banner) banner.removeAttribute('hidden'); }
+				function hideBanner() { if (banner) banner.setAttribute('hidden', ''); }
+
+				function openModal() {
+					var consent = getConsent();
+					if (fnToggle) fnToggle.checked = consent ? !!consent.functional : false;
+					if (anToggle) anToggle.checked = consent ? !!consent.analytics : false;
+					if (overlay) overlay.removeAttribute('hidden');
+					hideBanner();
+				}
+
+				function closeModal() {
+					if (overlay) overlay.setAttribute('hidden', '');
+					if (!getConsent()) showBanner();
+				}
+
+				function applyConsent(consent) {
+					hideBanner();
+					if (overlay) overlay.setAttribute('hidden', '');
+					if (consent.analytics) loadAnalytics();
+				}
+
+				var acceptAllBtns = [
+					document.getElementById('cookieBannerAcceptAll'),
+					document.getElementById('cookieModalAcceptAll')
+				];
+				acceptAllBtns.forEach(function (btn) {
+					if (btn) btn.addEventListener('click', function () {
+						applyConsent(setConsent(true, true));
+					});
+				});
+
+				var essentialBtn = document.getElementById('cookieBannerEssential');
+				if (essentialBtn) essentialBtn.addEventListener('click', function () {
+					applyConsent(setConsent(false, false));
+				});
+
+				var manageBtn = document.getElementById('cookieBannerManage');
+				if (manageBtn) manageBtn.addEventListener('click', openModal);
+
+				var saveBtn = document.getElementById('cookieModalSave');
+				if (saveBtn) saveBtn.addEventListener('click', function () {
+					applyConsent(setConsent(
+						fnToggle && fnToggle.checked,
+						anToggle && anToggle.checked
+					));
+				});
+
+				var closeBtn = document.getElementById('cookieModalClose');
+				if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+				if (overlay) overlay.addEventListener('click', function (e) {
+					if (e.target === overlay) closeModal();
+				});
+
+				var footerTrigger = document.getElementById('cookieSettingsLink');
+				if (footerTrigger) footerTrigger.addEventListener('click', function (e) {
+					e.preventDefault();
+					openModal();
+				});
+
+				var existing = getConsent();
+				if (existing) {
+					if (existing.analytics) loadAnalytics();
+				} else {
+					showBanner();
+				}
+			})();
 		</script>
 
 	</body>

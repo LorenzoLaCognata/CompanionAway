@@ -1,0 +1,23 @@
+{
+  "cc_banner_pre": "Utilizziamo i cookie per far funzionare questo sito e, con il tuo consenso, per capire come viene utilizzato. Consulta la nostra",
+  "cc_banner_link_text": "Cookie Policy",
+  "cc_banner_post": " per i dettagli.",
+  "cc_banner_accept_all": "Accetta tutti",
+  "cc_banner_essential_only": "Solo essenziali",
+  "cc_banner_manage": "Gestisci preferenze",
+  "cc_modal_title": "Preferenze sui cookie",
+  "cc_modal_intro": "Scegli i cookie che preferisci. I cookie essenziali sono sempre attivi perché il sito non può funzionare senza di essi. Leggi la",
+  "cc_modal_close": "Chiudi",
+  "cc_cat_essential_title": "Essenziali",
+  "cc_cat_essential_desc": "Accesso, funzionamento della piattaforma, sicurezza e protezione CSRF. Necessari per il funzionamento del sito.",
+  "cc_cat_functional_title": "Funzionali",
+  "cc_cat_functional_desc": "Ricordano la lingua scelta (EN/IT), le impostazioni di visualizzazione e l'avanzamento di moduli o questionari.",
+  "cc_cat_analytics_title": "Analitici",
+  "cc_cat_analytics_desc": "Google Analytics, in forma anonima. Ci aiutano a capire quali pagine vengono usate e a migliorare il sito.",
+  "cc_cat_marketing_title": "Marketing",
+  "cc_cat_marketing_desc": "Non utilizziamo cookie di marketing, pubblicitari o di tracciamento.",
+  "cc_cat_marketing_status": "Non utilizzati",
+  "cc_modal_save": "Salva preferenze",
+  "cc_modal_accept_all": "Accetta tutti",
+  "cc_footer_link": "Impostazioni Cookie"
+}
