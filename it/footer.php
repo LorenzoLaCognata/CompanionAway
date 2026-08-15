@@ -102,6 +102,18 @@
 					}
 				}
 
+				(function () {
+					var params = new URLSearchParams(location.search);
+					if (params.has('ca_self')) {
+						var on = params.get('ca_self') === '1';
+						document.cookie = 'ca_self=' + (on ? '1' : '0') + ';path=/;max-age=' + (on ? (60 * 60 * 24 * 730) : 0) + ';SameSite=Lax';
+					}
+				})();
+
+				function isSelf() {
+					return document.cookie.indexOf('ca_self=1') !== -1;
+				}
+
 				function isCurrentConsent(consent) {
 					return !!consent && consent.version === POLICY_VERSION;
 				}
@@ -113,6 +125,7 @@
 
 				function logEvent(payload) {
 					try {
+						payload.self = isSelf() ? 1 : 0;
 						fetch('/consent-log.php', {
 							method: 'POST',
 							headers: { 'Content-Type': 'application/json' },
@@ -158,28 +171,71 @@
 				var overlay  = document.getElementById('cookieModalOverlay');
 				var fnToggle = document.getElementById('cookieToggleFunctional');
 				var anToggle = document.getElementById('cookieToggleAnalytics');
+				var lastFocusedBeforeModal = null;
 
 				function showBanner() { if (banner) banner.removeAttribute('hidden'); }
 				function hideBanner() { if (banner) banner.setAttribute('hidden', ''); }
 
+				function getFocusable(container) {
+					if (!container) return [];
+					return Array.prototype.slice.call(
+						container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+					).filter(function (el) { return !el.disabled && el.offsetParent !== null; });
+				}
+
+				function returnFocus() {
+					if (lastFocusedBeforeModal && typeof lastFocusedBeforeModal.focus === 'function') {
+						lastFocusedBeforeModal.focus();
+					}
+					lastFocusedBeforeModal = null;
+				}
+
 				function openModal() {
+					lastFocusedBeforeModal = document.activeElement;
 					var consent = getConsent();
 					if (fnToggle) fnToggle.checked = consent ? !!consent.functional : false;
 					if (anToggle) anToggle.checked = consent ? !!consent.analytics : false;
-					if (overlay) overlay.removeAttribute('hidden');
+					if (overlay) {
+						overlay.removeAttribute('hidden');
+						var focusable = getFocusable(overlay);
+						if (focusable.length) focusable[0].focus();
+					}
 					hideBanner();
 				}
 
 				function closeModal() {
 					if (overlay) overlay.setAttribute('hidden', '');
 					if (!isCurrentConsent(getConsent())) showBanner();
+					returnFocus();
 				}
 
 				function applyConsent(consent) {
 					hideBanner();
+					var modalWasOpen = overlay && !overlay.hasAttribute('hidden');
 					if (overlay) overlay.setAttribute('hidden', '');
 					if (consent.analytics) loadAnalytics();
+					if (modalWasOpen) returnFocus();
 				}
+
+				document.addEventListener('keydown', function (e) {
+					if (!overlay || overlay.hasAttribute('hidden')) return;
+					if (e.key === 'Escape') {
+						closeModal();
+						return;
+					}
+					if (e.key !== 'Tab') return;
+					var focusable = getFocusable(overlay);
+					if (!focusable.length) return;
+					var first = focusable[0];
+					var last = focusable[focusable.length - 1];
+					if (e.shiftKey && document.activeElement === first) {
+						e.preventDefault();
+						last.focus();
+					} else if (!e.shiftKey && document.activeElement === last) {
+						e.preventDefault();
+						first.focus();
+					}
+				});
 
 				var acceptAllBtns = [
 					document.getElementById('cookieBannerAcceptAll'),
@@ -229,12 +285,21 @@
 					});
 				});
 
+				function logOncePerSession(key, event) {
+					try {
+						if (sessionStorage.getItem(key)) return;
+						sessionStorage.setItem(key, '1');
+					} catch (e) {} // sessionStorage unavailable — log anyway rather than lose the signal
+					logEvent({ event: event });
+				}
+
 				var existing = getConsent();
 				if (isCurrentConsent(existing)) {
 					if (existing.analytics) loadAnalytics();
+					logOncePerSession('caReturnLogged', 'return');
 				} else {
 					showBanner();
-					logEvent({ event: 'shown' });
+					logOncePerSession('caShownLogged', 'shown');
 				}
 			})();
 		</script>
