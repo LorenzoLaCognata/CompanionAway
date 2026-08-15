@@ -13,6 +13,7 @@
 	session_start();
 
 	$i = isset($_GET['step']) ? (int) $_GET['step'] : 1;
+	$submissionError = false;
 	
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -20,6 +21,8 @@
 
 		if ($i === 1) {
 			$fields = ['firstName', 'lastName', 'email', 'phone', 'currentLocation', 'message'];
+		} else {
+			$fields = [];
 		}
 		
 		foreach ($fields as $field) {
@@ -29,36 +32,69 @@
 		}
 		
 		if ($action === 'submit') {
-			
+
 			if (empty($_POST['website'])) {
+
+				$firstName = $_SESSION['data']['firstName'] ?? '';
+				$lastName = $_SESSION['data']['lastName'] ?? '';
+				$email = $_SESSION['data']['email'] ?? '';
+				$phone = $_SESSION['data']['phone'] ?? '';
+				$currentLocation = $_SESSION['data']['currentLocation'] ?? '';
+				$message = $_SESSION['data']['message'] ?? '';
+
+				$dbSaved = false;
+				$type = 'contact';
+				$data = json_encode([
+					'firstName' => $firstName,
+					'lastName' => $lastName,
+					'email' => $email,
+					'phone' => $phone,
+					'currentLocation' => $currentLocation,
+					'message' => $message,
+				]);
+
+				require_once __DIR__ . '/../private/config.php';
+
+				$db = @mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+				if ($db) {
+					$db->set_charset('utf8mb4');
+					$stmt = $db->prepare('INSERT INTO intake_submission (type, data) VALUES (?, ?)');
+					if ($stmt) {
+						$stmt->bind_param('ss', $type, $data);
+						$dbSaved = $stmt->execute();
+						$stmt->close();
+					}
+				}
+
+				// Email is best-effort from here on - the lead is already safe above.
 				$to = 'companionaway@altervista.org';
-				$subject = 'Companion Away - New Relocation: ' . $_SESSION['data']['firstName'] . ' ' . $_SESSION['data']['lastName'];
-				$body = "New intake request received:\n\n";
-				$body .= '- Name: ' . $_SESSION['data']['firstName'] . ' ' . $_SESSION['data']['lastName'] . "\n";
-				$body .= '- Email: ' . $_SESSION['data']['email'] . "\n";
-				$body .= '- Phone: ' . $_SESSION['data']['phone'] . "\n";
-				$body .= '- Current Location: ' . $_SESSION['data']['currentLocation'] . "\n";
-				$body .= '- Moving From: ' . $_SESSION['data']['movingFrom'] . "\n";
-				$body .= '- Moving To: ' . $_SESSION['data']['movingTo'] . "\n";
-				$body .= '- Arrival Date: ' . $_SESSION['data']['arrivalDate'] . "\n";
-				$body .= '- Certainty: ' . $_SESSION['data']['dateCertainty'] . "\n";
-				$body .= '- Who: ' . $_SESSION['data']['whoRelocating'] . "\n";
-				$body .= '- Topics: ' . checked_labels($_SESSION['data'], 'reloTopics', $translations) . "\n";
-				$body .= '- Worries: ' . $_SESSION['data']['reloWorries'] . "\n";
-				$body .= '- Extra: ' . $_SESSION['data']['reloExtra'] . "\n";
-				$body .= '- How Found: ' . $_SESSION['data']['howFound'] . "\n";
-				$body .= '- Final Notes: ' . $_SESSION['data']['finalNotes'] . "\n";
+				$subject = 'Companion Away - New Contact Message: ' . $firstName . ' ' . $lastName;
+				$body = "New contact form message received:\n\n";
+				$body .= '- Name: ' . $firstName . ' ' . $lastName . "\n";
+				$body .= '- Email: ' . $email . "\n";
+				$body .= '- Phone: ' . $phone . "\n";
+				$body .= '- Current Location: ' . $currentLocation . "\n";
+				$body .= '- Message: ' . $message . "\n";
 				$headers = 'From: companionaway@altervista.org' . "\r\n" .
-					'Reply-To: ' . $_SESSION['data']['email'] . "\r\n" .
+					'Reply-To: ' . $email . "\r\n" .
 					'Cc: giulia.carla20@gmail.com' . "\r\n" .
 					'Content-Type: text/plain; charset=UTF-8';
-				$sent = mail($to, $subject, $body, $headers);
-			}
-			
-			if ($sent) {
-				unset($_SESSION['data']);
-				header('Location: ' . $currentPage . '?step=' . ($i+1));
-				exit;
+				$mailSent = @mail($to, $subject, $body, $headers);
+
+				if ($db) {
+					if ($dbSaved && $mailSent) {
+						$db->query('UPDATE intake_submission SET mail_sent = 1 WHERE id = ' . $db->insert_id);
+					}
+					$db->close();
+				}
+
+				if ($dbSaved || $mailSent) {
+					unset($_SESSION['data']);
+					header('Location: ' . $currentPage . '?step=' . ($i+1));
+					exit;
+				} else {
+					$submissionError = true;
+				}
 			}
 		}
 		
