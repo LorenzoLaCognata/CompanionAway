@@ -41,7 +41,7 @@ if ($action === 'add' || $action === 'edit') {
 	require __DIR__ . '/../assets/page/inventory_tool/item-form-select-options.php';
 }
 else if ($action === 'master_data') {
-	header('Location: https://companionaway.com/en/coming_soon.php');
+	header('Location: /' . $lang . '/coming_soon.php');
 	exit;
 }
 ?>
