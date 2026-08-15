@@ -71,6 +71,16 @@
   border-color: rgba(253,246,236,.5);
 }
 
+.cookie-modal__footer .cookie-btn--ghost {
+  color: var(--navy);
+  border-color: rgba(26,35,64,.25);
+}
+
+.cookie-modal__footer .cookie-btn--ghost:hover {
+  color: var(--navy);
+  border-color: rgba(26,35,64,.5);
+}
+
 /* Preferences modal */
 
 .cookie-modal-overlay {
