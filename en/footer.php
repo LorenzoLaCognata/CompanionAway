@@ -92,6 +92,9 @@
 			(function () {
 				var COOKIE_NAME = 'ca_consent';
 				var GA_ID = 'G-2KTKK3SNWY';
+				// Bump this whenever the cookie categories or what they do materially changes —
+				// visitors on an older version get re-prompted instead of silently carrying over.
+				var POLICY_VERSION = 1;
 
 				function getConsent() {
 					var match = document.cookie.match(new RegExp('(?:^|; )' + COOKIE_NAME + '=([^;]*)'));
@@ -103,15 +106,44 @@
 					}
 				}
 
+				function isCurrentConsent(consent) {
+					return !!consent && consent.version === POLICY_VERSION;
+				}
+
+				function functionalAllowed() {
+					var c = getConsent();
+					return isCurrentConsent(c) && !!c.functional;
+				}
+
+				function logEvent(payload) {
+					try {
+						fetch('/consent-log.php', {
+							method: 'POST',
+							headers: { 'Content-Type': 'application/json' },
+							body: JSON.stringify(payload),
+							keepalive: true
+						});
+					} catch (e) {}
+				}
+
+				function clearFunctionalCookies() {
+					['ca_lang', 'ca_resume_relocation', 'ca_resume_travel'].forEach(function (name) {
+						document.cookie = name + '=;path=/;max-age=0;SameSite=Lax';
+					});
+				}
+
 				function setConsent(functional, analytics) {
 					var value = {
 						essential: true,
 						functional: !!functional,
 						analytics: !!analytics,
 						marketing: false,
+						version: POLICY_VERSION,
 						ts: Date.now()
 					};
 					document.cookie = COOKIE_NAME + '=' + encodeURIComponent(JSON.stringify(value)) + ';path=/;max-age=' + (60 * 60 * 24 * 365) + ';SameSite=Lax';
+					if (!value.functional) clearFunctionalCookies();
+					logEvent({ event: 'choice', functional: value.functional, analytics: value.analytics });
 					return value;
 				}
 
@@ -144,7 +176,7 @@
 
 				function closeModal() {
 					if (overlay) overlay.setAttribute('hidden', '');
-					if (!getConsent()) showBanner();
+					if (!isCurrentConsent(getConsent())) showBanner();
 				}
 
 				function applyConsent(consent) {
@@ -192,11 +224,21 @@
 					openModal();
 				});
 
+				var langLinks = document.querySelectorAll('.nav-lang__option a[data-set-lang]');
+				langLinks.forEach(function (link) {
+					link.addEventListener('click', function () {
+						if (!functionalAllowed()) return;
+						var chosen = link.getAttribute('data-set-lang');
+						document.cookie = 'ca_lang=' + chosen + ';path=/;max-age=' + (60 * 60 * 24 * 365) + ';SameSite=Lax';
+					});
+				});
+
 				var existing = getConsent();
-				if (existing) {
+				if (isCurrentConsent(existing)) {
 					if (existing.analytics) loadAnalytics();
 				} else {
 					showBanner();
+					logEvent({ event: 'shown' });
 				}
 			})();
 		</script>
