@@ -1,8 +1,8 @@
 		</main>
 
 <?php
-	$cookieConsentLangJson = file_get_contents('cookie_consent/lang.json');
-	$translations = array_merge($translations, json_decode($cookieConsentLangJson, true));
+	$cookieConsentLangJson = file_get_contents(__DIR__ . '/cookie_consent/lang.json');
+	$translations = array_merge($translations ?? [], json_decode($cookieConsentLangJson, true) ?? []);
 ?>
 
 		<footer class="site-footer">
@@ -36,9 +36,9 @@
 			
 		</footer>
 
-<?php include '/assets/page/cookie_consent/banner.php'; ?>
+<?php include __DIR__ . '/../assets/page/cookie_consent/banner.php'; ?>
 
-<?php include '/assets/page/cookie_consent/modal.php'; ?>
+<?php include __DIR__ . '/../assets/page/cookie_consent/modal.php'; ?>
 
 		<script>
 			const burger = document.querySelector('.nav-burger');
