@@ -36,9 +36,9 @@
 			
 		</footer>
 
-<?php include '../assets/page/cookie_consent/banner.php'; ?>
+<?php include '/assets/page/cookie_consent/banner.php'; ?>
 
-<?php include '../assets/page/cookie_consent/modal.php'; ?>
+<?php include '/assets/page/cookie_consent/modal.php'; ?>
 
 		<script>
 			const burger = document.querySelector('.nav-burger');
