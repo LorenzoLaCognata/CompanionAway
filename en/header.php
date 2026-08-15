@@ -23,10 +23,10 @@
 						<a href="/<?= $lang ?>/login.php" class="btn btn--ghost btn--sm <?php echo ($currentPage === 'login.php') ? 'nav-links__item--active' : ''; ?>">LOGIN</a>
 					</li>
 					<li>
-						<span class="nav-lang__option <?php echo ($lang === 'en') ? 'nav-lang__option--active' : ''; ?>"><a href="<?= $enSlug ?>"><span class="flag flag-us"></span> EN</a></span>
+						<span class="nav-lang__option <?php echo ($lang === 'en') ? 'nav-lang__option--active' : ''; ?>"><a href="<?= $enSlug ?>" data-set-lang="en"><span class="flag flag-us"></span> EN</a></span>
 					</li>
 					<li>
-						<span class="nav-lang__option <?php echo ($lang === 'it') ? 'nav-lang__option--active' : ''; ?>"><a href="<?= $itSlug ?>"><span class="flag flag-it"></span> IT</a></span>
+						<span class="nav-lang__option <?php echo ($lang === 'it') ? 'nav-lang__option--active' : ''; ?>"><a href="<?= $itSlug ?>" data-set-lang="it"><span class="flag flag-it"></span> IT</a></span>
 					</li>
 				</ul>
 

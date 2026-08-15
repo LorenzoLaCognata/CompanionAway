@@ -1,4 +1,9 @@
 <?php
+	if (($_COOKIE['ca_lang'] ?? '') === 'it') {
+		header('Location: /it');
+		exit;
+	}
+
 	$lang = 'en';
 	$currentPage = basename(__FILE__);
 
