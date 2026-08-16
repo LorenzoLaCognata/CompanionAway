@@ -63,7 +63,6 @@
 							<ul class="legal-list">
 								<li><?= $translations['privacy_s05_li1'] ?></li>
 								<li><?= $translations['privacy_s05_li2'] ?></li>
-								<li><?= $translations['privacy_s05_li3'] ?></li>
 							</ul>
 							<p class="legal-text"><?= $translations['privacy_s05_p2'] ?></p>
 						</div>
