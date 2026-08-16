@@ -63,6 +63,8 @@
 								<li><?= $translations['tos_s04_li1'] ?></li>
 								<li><?= $translations['tos_s04_li2'] ?></li>
 								<li><?= $translations['tos_s04_li3'] ?></li>
+								<li><?= $translations['tos_s04_li4'] ?></li>
+								<li><?= $translations['tos_s04_li5'] ?></li>
 							</ul>
 							<p class="legal-text"><?= $translations['tos_s04_p6'] ?></p>
 						</div>
