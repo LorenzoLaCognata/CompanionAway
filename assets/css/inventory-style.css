@@ -459,6 +459,18 @@
   margin-bottom: var(--space-3);
 }
 
+.hi-manage-toolbar {
+  margin-bottom: var(--space-4);
+}
+
+.hi-table__indent-1 {
+  padding-left: 26px;
+}
+
+.hi-table__indent-2 {
+  padding-left: 42px;
+}
+
 .hi-form {
   max-width: 660px;
   margin: var(--space-6) auto;
