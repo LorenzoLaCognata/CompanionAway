@@ -66,7 +66,6 @@
 					}
 				}
 
-				// Email is best-effort from here on - the lead is already safe above.
 				$to = 'companionaway@altervista.org';
 				$subject = 'Companion Away - New Contact Message: ' . $firstName . ' ' . $lastName;
 				$body = "New contact form message received:\n\n";

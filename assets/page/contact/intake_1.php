@@ -2,6 +2,9 @@
 					<input type="hidden" name="from" value="1">
 					<h2 class="intake-section-title"><?= $translations['contact_title_plain'] ?> <em><?= $translations['contact_title_em'] ?></em></h2>
 					<p class="intake-section-desc"><?= $translations['contact_desc'] ?></p>
+<?php if (!empty($submissionError)): ?>
+					<div class="warning-box"><p><?= $translations['error_submission'] ?></p></div>
+<?php endif; ?>
 					<div class="intake-form-row">
 						<div class="intake-field"><label><?= $translations['contact_first_name_label'] ?></label><input type="text" name="firstName" value="<?= htmlspecialchars($_SESSION['data']['firstName'] ?? '') ?>" placeholder="<?= $translations['contact_first_name_placeholder'] ?>" required></div>
 						<div class="intake-field"><label><?= $translations['contact_last_name_label'] ?></label><input type="text" name="lastName" value="<?= htmlspecialchars($_SESSION['data']['lastName'] ?? '') ?>" placeholder="<?= $translations['contact_last_name_placeholder'] ?>" required></div>

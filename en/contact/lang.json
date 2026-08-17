@@ -30,6 +30,8 @@
     "contact_message_label": "Your message *",
     "contact_message_placeholder": "What would you like to know?",
 
+    "error_submission": "Something went wrong sending your message. Please try again in a moment, or email contact@companionaway.com directly.",
+
     "thankyou_title_plain": "Message sent,",
     "thankyou_title_em": "thank you.",
     "thankyou_sub": "I've received your message and I'll get back to you soon."

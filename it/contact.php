@@ -42,8 +42,6 @@
 				$currentLocation = $_SESSION['data']['currentLocation'] ?? '';
 				$message = $_SESSION['data']['message'] ?? '';
 
-				// The DB row is the source of truth for the lead: it's written
-				// first so a mail() failure on the host never loses a submission.
 				$dbSaved = false;
 				$type = 'contact';
 				$data = json_encode([
@@ -68,7 +66,6 @@
 					}
 				}
 
-				// Email is best-effort from here on - the lead is already safe above.
 				$to = 'companionaway@altervista.org';
 				$subject = 'Companion Away - Nuovo Messaggio di Contatto: ' . $firstName . ' ' . $lastName;
 				$body = "Nuovo messaggio dal modulo di contatto ricevuto:\n\n";
@@ -95,8 +92,6 @@
 					header('Location: ' . $currentPage . '?step=' . ($i+1));
 					exit;
 				} else {
-					// Both the DB save and the email failed - nothing was captured,
-					// so tell the visitor rather than silently losing their message.
 					$submissionError = true;
 				}
 			}
