@@ -3,6 +3,12 @@
 	if ($manageDepth > 1 && $manageParentId !== null) {
 		$manageParentPath = $table === 'bags' ? bagPath($db, $manageParentId) : locPath($db, $manageParentId);
 	}
+	$manageIcons = manageIconChoices($table);
+	// Preselect the table's default icon on a fresh add form (no icon chosen yet).
+	$manageIconSelected = $manageIcon !== '' ? $manageIcon : manageTables()[$table]['icon'];
+	$manageIconIsCustom = !in_array($manageIconSelected, $manageIcons, true);
+	// Radios are just a quick-pick; the custom text box (if filled) always wins server-side,
+	// so it's fine for a preset to stay checked even while a custom icon is prefilled.
 ?>
 		<div class="hi-form">
 <?php foreach ($manageErrors as $err): ?>
@@ -20,9 +26,19 @@
 						<label><?= $translations['word_name'] ?></label>
 						<input class="hi-input" type="text" name="name" value="<?= htmlspecialchars($manageName) ?>" required autofocus>
 					</div>
-					<div class="hi-field">
+					<div class="hi-field hi-field--full">
 						<label><?= $translations['manage_icon_placeholder'] ?></label>
-						<input class="hi-input" type="text" name="icon" value="<?= htmlspecialchars($manageIcon) ?>" placeholder="<?= htmlspecialchars(manageTables()[$table]['icon']) ?>">
+						<div class="hi-icon-picker">
+<?php foreach ($manageIcons as $iconChoice): ?>
+							<label class="hi-icon-picker__option">
+								<input type="radio" name="icon_choice" value="<?= htmlspecialchars($iconChoice) ?>"<?= (!$manageIconIsCustom && $manageIconSelected === $iconChoice) ? ' checked' : '' ?>>
+								<span><?= htmlspecialchars($iconChoice) ?></span>
+							</label>
+<?php endforeach; ?>
+							<div class="hi-icon-picker__option hi-icon-picker__option--custom<?= $manageIconIsCustom ? ' is-active' : '' ?>">
+								<input class="hi-input" type="text" name="icon_custom" value="<?= htmlspecialchars($manageIconIsCustom ? $manageIconSelected : '') ?>" placeholder="✏️" maxlength="4">
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="hi-form__actions">

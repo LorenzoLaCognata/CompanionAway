@@ -11,7 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$manageFormAction = $_POST['form_action'] ?? '';
 	$manageEditId = !empty($_POST['id']) ? (int)$_POST['id'] : null;
 	$manageName = trim($_POST['name'] ?? '');
-	$manageIcon = trim($_POST['icon'] ?? '');
+	$manageIconCustom = trim($_POST['icon_custom'] ?? '');
+	$manageIcon = $manageIconCustom !== '' ? $manageIconCustom : trim($_POST['icon_choice'] ?? '');
 	$manageParentId = ($_POST['parent_id'] ?? '') !== '' ? (int)$_POST['parent_id'] : null;
 	$manage = $manageEditId !== null ? 'edit' : 'add';
 	$manageNotFound = false;

@@ -124,9 +124,9 @@
   color: var(--navy);
 }
 
-.hi-sidebar__link--l1 { padding-left: var(--space-8); font-size: var(--text-xs); }
+.hi-sidebar__link--l1 { padding-left: 16px; font-size: var(--text-xs); }
 
-.hi-sidebar__link--l2 { padding-left: 44px; font-size: var(--text-xs); }
+.hi-sidebar__link--l2 { padding-left: 24px; font-size: var(--text-xs); }
 
 .hi-sidebar__icon {
   font-size: var(--text-sm);
@@ -159,11 +159,14 @@
 
 .hi-tree {
   border-left: var(--border-subtle);
-  margin-left: 28px;
+  margin-left: 8px;
 }
 
 .hi-tree--l2 {
-  margin-left: 44px;
+  /* Nested inside a .hi-tree wrapper, so this stacks on top of its 8px —
+     total wrapper offset for level 2 ends up 8 + 8 = 16px, topped up by
+     the link's own padding-left below. */
+  margin-left: 8px;
 }
 
 .hi-toolbar {
@@ -463,12 +466,90 @@
   margin-bottom: var(--space-4);
 }
 
-.hi-table__indent-1 {
-  padding-left: 26px;
+.hi-table__name {
+  position: relative;
+}
+
+.hi-table__indent-1,
+.hi-table__indent-2 {
+  padding-left: var(--space-8);
 }
 
 .hi-table__indent-2 {
-  padding-left: 42px;
+  padding-left: var(--space-12);
+}
+
+.hi-table__indent-1::before,
+.hi-table__indent-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--space-4);
+  border-left: var(--border-subtle);
+}
+
+.hi-table__indent-2::before {
+  left: var(--space-8);
+}
+
+.hi-table__branch {
+  display: inline-block;
+  margin-right: 4px;
+  color: var(--muted);
+}
+
+.hi-icon-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.hi-icon-picker__option {
+  position: relative;
+}
+
+.hi-icon-picker__option input[type="radio"] {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.hi-icon-picker__option span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: var(--border-default);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-md);
+  background: var(--warm-white);
+  transition: border-color var(--ease), background var(--ease);
+}
+
+.hi-icon-picker__option input[type="radio"]:checked + span {
+  border-color: var(--amber);
+  background: var(--sand-light);
+}
+
+.hi-icon-picker__option input[type="radio"]:focus-visible + span {
+  border-color: var(--terra);
+}
+
+.hi-icon-picker__option--custom .hi-input {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  font-size: var(--text-md);
+}
+
+.hi-icon-picker__option--custom.is-active .hi-input {
+  border-color: var(--amber);
+  background: var(--sand-light);
 }
 
 .hi-form {

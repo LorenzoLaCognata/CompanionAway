@@ -3,11 +3,27 @@
 	// depth: number of levels (1 = flat, 2 = bags, 3 = locations).
 	function manageTables(): array {
 		return [
-			'categories' => ['depth' => 1, 'title' => 'manage_categories_title', 'empty' => 'sidebar_no_categories', 'icon' => '📦'],
-			'owners'     => ['depth' => 1, 'title' => 'manage_owners_title',     'empty' => 'manage_no_owners',       'icon' => '👤'],
-			'bags'       => ['depth' => 2, 'title' => 'manage_bags_title',       'empty' => 'sidebar_no_bags',        'icon' => '🧳'],
-			'locations'  => ['depth' => 3, 'title' => 'manage_locations_title',  'empty' => 'sidebar_no_locations',   'icon' => '📍'],
+			'categories' => [
+				'depth' => 1, 'title' => 'manage_categories_title', 'empty' => 'sidebar_no_categories', 'icon' => '📦',
+				'icons' => ['📦', '🧢', '👕', '🛠️', '💻', '📚', '🎧', '🧴', '⚽', '🎮'],
+			],
+			'owners' => [
+				'depth' => 1, 'title' => 'manage_owners_title', 'empty' => 'manage_no_owners', 'icon' => '👤',
+				'icons' => ['👤', '👨', '👩', '🧑', '👦', '👧', '👴', '👵'],
+			],
+			'bags' => [
+				'depth' => 2, 'title' => 'manage_bags_title', 'empty' => 'sidebar_no_bags', 'icon' => '🧳',
+				'icons' => ['🧳', '🎒', '👜', '💼', '🛍️', '🧰', '👝', '🎽'],
+			],
+			'locations' => [
+				'depth' => 3, 'title' => 'manage_locations_title', 'empty' => 'sidebar_no_locations', 'icon' => '📍',
+				'icons' => ['📍', '🏠', '🚪', '🗄️', '🛏️', '🚗', '🏢', '🗃️'],
+			],
 		];
+	}
+
+	function manageIconChoices(string $table): array {
+		return manageTables()[$table]['icons'] ?? [];
 	}
 
 	function manageTableIsValid(string $table): bool {
@@ -42,6 +58,7 @@
 		};
 	}
 
+	// Level of an existing entity: 0-based from the root. -1 if $id is null (i.e. "no parent" / root).
 	function manageEntityLevel(mysqli $db, string $table, ?int $id): int {
 		if ($id === null) return -1;
 		return match ($table) {
@@ -80,9 +97,11 @@
 		};
 	}
 
+	// Translation key for the "+ Add ..." button, given the level of the parent it will be added under.
+	// $parentLevel: -1 for root, 0 for a level-0 parent, 1 for a level-1 parent.
 	function manageAddLabelKey(string $table, int $parentLevel): string {
 		if ($table === 'bags') {
-			return $parentLevel === -1 ? 'manage_add_bag' : 'manage_add_bag_container';
+			return $parentLevel === -1 ? 'manage_add_bag' : 'manage_add_case';
 		}
 		if ($table === 'locations') {
 			return match ($parentLevel) {
@@ -91,9 +110,20 @@
 				default => 'manage_add_container',
 			};
 		}
-		return 'manage_add_button';
+		return $table === 'owners' ? 'manage_add_owner' : 'manage_add_category';
 	}
 
+	// The add-button translations carry a parenthetical example, e.g. "+ Add Room
+	// (kitchen, bedroom…)" — that's fine in the roomy toolbar but wraps awkwardly
+	// in a narrow table cell, so row-level buttons use just the part before " (".
+	function manageShortLabel(string $label): string {
+		$pos = mb_strpos($label, ' (');
+		return $pos !== false ? mb_substr($label, 0, $pos) : $label;
+	}
+
+	// Renders <tr> rows for one entity and, recursively, all of its descendants.
+	// $level is this entity's 0-based depth (0 = root). Row indent and the
+	// "+ Add ..." button under the last non-leaf level are derived from it.
 	function manageRenderEntityRow(mysqli $db, string $table, string $currentPage, array $translations, array $entity, int $level, int $maxDepth): void {
 		$id = (int)$entity['id'];
 		$indentClass = $level > 0 ? ' hi-table__indent-' . min($level, 2) : '';
@@ -103,11 +133,11 @@
 		?>
 		<tr>
 			<td><?= htmlspecialchars($entity['icon']) ?></td>
-			<td class="hi-table__name<?= $indentClass ?>"><?= htmlspecialchars($entity['name']) ?></td>
+			<td class="hi-table__name<?= $indentClass ?>"><?= $level > 0 ? '<span class="hi-table__branch">↳</span> ' : '' ?><?= htmlspecialchars($entity['name']) ?></td>
 <?php if ($maxDepth > 1): ?>
 			<td>
 <?php if (!$isLastLevel): $addUrl = manageUrl($currentPage, $table, 'add', null, $id); ?>
-				<a class="hi-row-actions__btn" href="<?= htmlspecialchars($addUrl) ?>"><?= $translations[manageAddLabelKey($table, $level)] ?></a>
+				<a class="hi-row-actions__btn" href="<?= htmlspecialchars($addUrl) ?>"><?= htmlspecialchars(manageShortLabel($translations[manageAddLabelKey($table, $level)])) ?></a>
 <?php endif; ?>
 			</td>
 <?php endif; ?>
