@@ -66,7 +66,7 @@
 					}
 				}
 
-				$to = 'companionaway@altervista.org';
+				$to = 'contact@companionaway.com';
 				$subject = 'Companion Away - New Contact Message: ' . $firstName . ' ' . $lastName;
 				$body = "New contact form message received:\n\n";
 				$body .= '- Name: ' . $firstName . ' ' . $lastName . "\n";
@@ -76,7 +76,7 @@
 				$body .= '- Message: ' . $message . "\n";
 				$headers = 'From: companionaway@altervista.org' . "\r\n" .
 					'Reply-To: ' . $email . "\r\n" .
-					'Cc: giulia.carla20@gmail.com' . "\r\n" .
+					'Cc: companionaway@altervista.org,companionaway@gmail.com' . "\r\n" .
 					'Content-Type: text/plain; charset=UTF-8';
 				$mailSent = @mail($to, $subject, $body, $headers);
 

@@ -49,7 +49,7 @@
 		} elseif ($action === 'submit') {
 			
 			if (empty($_POST['website'])) {
-				$to = 'companionaway@altervista.org';
+				$to = 'contact@companionaway.com';
 				$subject = 'Companion Away - New Relocation: ' . $_SESSION['data']['firstName'] . ' ' . $_SESSION['data']['lastName'];
 				$body = "New intake request received:\n\n";
 				$body .= '- Name: ' . $_SESSION['data']['firstName'] . ' ' . $_SESSION['data']['lastName'] . "\n";
@@ -67,8 +67,8 @@
 				$body .= '- How Found: ' . $_SESSION['data']['howFound'] . "\n";
 				$body .= '- Final Notes: ' . $_SESSION['data']['finalNotes'] . "\n";
 				$headers = 'From: companionaway@altervista.org' . "\r\n" .
-					'Reply-To: ' . $_SESSION['data']['email'] . "\r\n" .
-					'Cc: giulia.carla20@gmail.com' . "\r\n" .
+				'Reply-To: ' . $_SESSION['data']['email'] . "\r\n" .
+					'Cc: companionaway@altervista.org,companionaway@gmail.com' . "\r\n" .
 					'Content-Type: text/plain; charset=UTF-8';
 				$sent = mail($to, $subject, $body, $headers);
 			}
