@@ -69,7 +69,7 @@
 					setcookie('ca_resume_relocation', $token, [
 						'expires' => time() + 60 * 60 * 24 * 30,
 						'path' => '/',
-						'secure' => true,
+						'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
 						'httponly' => true,
 						'samesite' => 'Lax',
 					]);
