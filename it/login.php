@@ -1,6 +1,6 @@
 <?php
  
-header('Location: https://companionaway.com/it/coming_soon.php');
+header('Location: /it/coming_soon.php');
  
 exit;
  

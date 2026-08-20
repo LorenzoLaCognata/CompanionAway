@@ -1,0 +1,23 @@
+{
+  "cc_banner_pre": "We use cookies to make this site work and, with your permission, to understand how it's used. See our",
+  "cc_banner_link_text": "Cookie Policy",
+  "cc_banner_post": " for details.",
+  "cc_banner_accept_all": "Accept all",
+  "cc_banner_essential_only": "Essential only",
+  "cc_banner_manage": "Manage preferences",
+  "cc_modal_title": "Cookie preferences",
+  "cc_modal_intro": "Choose which cookies you're comfortable with. Essential cookies are always on because the site can't function without them. Read the full",
+  "cc_modal_close": "Close",
+  "cc_cat_essential_title": "Essential",
+  "cc_cat_essential_desc": "Login, platform access, security, and CSRF protection. Required for the site to work.",
+  "cc_cat_functional_title": "Functional",
+  "cc_cat_functional_desc": "Remembers your language (EN/IT), display settings, and form or questionnaire progress.",
+  "cc_cat_analytics_title": "Analytics",
+  "cc_cat_analytics_desc": "Google Analytics, anonymized. Helps us understand which pages are used and improve the site.",
+  "cc_cat_marketing_title": "Marketing",
+  "cc_cat_marketing_desc": "We don't use marketing, advertising, or tracking cookies.",
+  "cc_cat_marketing_status": "Not used",
+  "cc_modal_save": "Save preferences",
+  "cc_modal_accept_all": "Accept all",
+  "cc_footer_link": "Cookie Settings"
+}

@@ -5,3 +5,4 @@
 	define('DB_NAME', '');
 
 	define('PEXELS_API_KEY', '');
+	define('REPORT_PASSWORD', '');

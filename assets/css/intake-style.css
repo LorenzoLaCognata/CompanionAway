@@ -308,6 +308,20 @@
   border-top: 1px solid var(--sand);
 }
 
+.intake-error {
+  background: rgba(193, 80, 46, 0.08);
+  border-left: 2px solid var(--terra);
+  padding: 14px 18px;
+  margin-bottom: var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--brown);
+  line-height: 1.6;
+}
+
+.intake-agree {
+  margin-top: var(--space-6);
+}
+
 .intake-nav-row {
   display: flex;
   justify-content: space-between;
