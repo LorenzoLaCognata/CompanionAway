@@ -113,14 +113,6 @@
 		return $table === 'owners' ? 'manage_add_owner' : 'manage_add_category';
 	}
 
-	// The add-button translations carry a parenthetical example, e.g. "+ Add Room
-	// (kitchen, bedroom…)" — that's fine in the roomy toolbar but wraps awkwardly
-	// in a narrow table cell, so row-level buttons use just the part before " (".
-	function manageShortLabel(string $label): string {
-		$pos = mb_strpos($label, ' (');
-		return $pos !== false ? mb_substr($label, 0, $pos) : $label;
-	}
-
 	// Renders <tr> rows for one entity and, recursively, all of its descendants.
 	// $level is this entity's 0-based depth (0 = root). Row indent and the
 	// "+ Add ..." button under the last non-leaf level are derived from it.
@@ -137,7 +129,7 @@
 <?php if ($maxDepth > 1): ?>
 			<td>
 <?php if (!$isLastLevel): $addUrl = manageUrl($currentPage, $table, 'add', null, $id); ?>
-				<a class="hi-row-actions__btn" href="<?= htmlspecialchars($addUrl) ?>"><?= htmlspecialchars(manageShortLabel($translations[manageAddLabelKey($table, $level)])) ?></a>
+				<a class="hi-row-actions__btn" href="<?= htmlspecialchars($addUrl) ?>"><?= $translations[manageAddLabelKey($table, $level)] ?></a>
 <?php endif; ?>
 			</td>
 <?php endif; ?>

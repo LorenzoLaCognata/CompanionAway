@@ -124,9 +124,9 @@
   color: var(--navy);
 }
 
-.hi-sidebar__link--l1 { padding-left: 16px; font-size: var(--text-xs); }
+.hi-sidebar__link--l1 { padding-left: 14px; font-size: var(--text-xs); }
 
-.hi-sidebar__link--l2 { padding-left: 24px; font-size: var(--text-xs); }
+.hi-sidebar__link--l2 { padding-left: 20px; font-size: var(--text-xs); }
 
 .hi-sidebar__icon {
   font-size: var(--text-sm);
@@ -159,14 +159,17 @@
 
 .hi-tree {
   border-left: var(--border-subtle);
-  margin-left: 8px;
+  margin-left: 6px;
 }
 
 .hi-tree--l2 {
-  /* Nested inside a .hi-tree wrapper, so this stacks on top of its 8px —
-     total wrapper offset for level 2 ends up 8 + 8 = 16px, topped up by
-     the link's own padding-left below. */
-  margin-left: 8px;
+  /* Zeroed out deliberately: .hi-tree--l2 is nested inside a .hi-tree
+     wrapper, and margin-left isn't additive with the base .hi-tree rule on
+     the same element (the later rule just wins) — but the nesting itself
+     still stacks visually. Keeping this at 0 stops the wrapper's own
+     contribution from doubling up on deeper levels; the extra depth is
+     expressed entirely by the larger padding-left below. */
+  margin-left: 0;
 }
 
 .hi-toolbar {
@@ -472,11 +475,11 @@
 
 .hi-table__indent-1,
 .hi-table__indent-2 {
-  padding-left: var(--space-8);
+  padding-left: 44px;
 }
 
 .hi-table__indent-2 {
-  padding-left: var(--space-12);
+  padding-left: 78px;
 }
 
 .hi-table__indent-1::before,
@@ -485,18 +488,19 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: var(--space-4);
-  border-left: var(--border-subtle);
+  left: 22px;
+  border-left: var(--border-default);
 }
 
 .hi-table__indent-2::before {
-  left: var(--space-8);
+  left: 56px;
 }
 
 .hi-table__branch {
   display: inline-block;
-  margin-right: 4px;
+  margin-right: 6px;
   color: var(--muted);
+  font-size: var(--text-md);
 }
 
 .hi-icon-picker {
