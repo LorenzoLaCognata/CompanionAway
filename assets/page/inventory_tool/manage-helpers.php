@@ -125,7 +125,7 @@
 		?>
 		<tr>
 			<td><?= htmlspecialchars($entity['icon']) ?></td>
-			<td class="hi-table__name<?= $indentClass ?>"><?= $level > 0 ? '<span class="hi-table__branch">↳</span> ' : '' ?><?= htmlspecialchars($entity['name']) ?></td>
+			<td class="hi-table__name<?= $indentClass ?>"><?= $level > 0 ? '<span class="hi-branch">↳</span> ' : '' ?><?= htmlspecialchars($entity['name']) ?></td>
 <?php if ($maxDepth > 1): ?>
 			<td>
 <?php if (!$isLastLevel): $addUrl = manageUrl($currentPage, $table, 'add', null, $id); ?>
