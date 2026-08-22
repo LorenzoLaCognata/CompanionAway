@@ -124,9 +124,9 @@
   color: var(--navy);
 }
 
-.hi-sidebar__link--l1 { padding-left: var(--space-8); font-size: var(--text-xs); }
+.hi-sidebar__link--l1 { padding-left: 14px; font-size: var(--text-xs); }
 
-.hi-sidebar__link--l2 { padding-left: 44px; font-size: var(--text-xs); }
+.hi-sidebar__link--l2 { padding-left: 20px; font-size: var(--text-xs); }
 
 .hi-sidebar__icon {
   font-size: var(--text-sm);
@@ -159,11 +159,17 @@
 
 .hi-tree {
   border-left: var(--border-subtle);
-  margin-left: 28px;
+  margin-left: 6px;
 }
 
 .hi-tree--l2 {
-  margin-left: 44px;
+  /* Zeroed out deliberately: .hi-tree--l2 is nested inside a .hi-tree
+     wrapper, and margin-left isn't additive with the base .hi-tree rule on
+     the same element (the later rule just wins) — but the nesting itself
+     still stacks visually. Keeping this at 0 stops the wrapper's own
+     contribution from doubling up on deeper levels; the extra depth is
+     expressed entirely by the larger padding-left below. */
+  margin-left: 0;
 }
 
 .hi-toolbar {
@@ -457,6 +463,97 @@
 .hi-empty__icon {
   font-size: var(--text-xl);
   margin-bottom: var(--space-3);
+}
+
+.hi-manage-toolbar {
+  margin-bottom: var(--space-4);
+}
+
+.hi-table__name {
+  position: relative;
+}
+
+.hi-table__indent-1,
+.hi-table__indent-2 {
+  padding-left: 44px;
+}
+
+.hi-table__indent-2 {
+  padding-left: 78px;
+}
+
+.hi-table__indent-1::before,
+.hi-table__indent-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 22px;
+  border-left: var(--border-default);
+}
+
+.hi-table__indent-2::before {
+  left: 56px;
+}
+
+.hi-table__branch {
+  display: inline-block;
+  margin-right: 6px;
+  color: var(--muted);
+  font-size: var(--text-md);
+}
+
+.hi-icon-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.hi-icon-picker__option {
+  position: relative;
+}
+
+.hi-icon-picker__option input[type="radio"] {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.hi-icon-picker__option span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: var(--border-default);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-md);
+  background: var(--warm-white);
+  transition: border-color var(--ease), background var(--ease);
+}
+
+.hi-icon-picker__option input[type="radio"]:checked + span {
+  border-color: var(--amber);
+  background: var(--sand-light);
+}
+
+.hi-icon-picker__option input[type="radio"]:focus-visible + span {
+  border-color: var(--terra);
+}
+
+.hi-icon-picker__option--custom .hi-input {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  text-align: center;
+  font-size: var(--text-md);
+}
+
+.hi-icon-picker__option--custom.is-active .hi-input {
+  border-color: var(--amber);
+  background: var(--sand-light);
 }
 
 .hi-form {

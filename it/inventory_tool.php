@@ -41,8 +41,7 @@ if ($action === 'add' || $action === 'edit') {
 	require __DIR__ . '/../assets/page/inventory_tool/item-form-select-options.php';
 }
 else if ($action === 'master_data') {
-	header('Location: /' . $lang . '/coming_soon.php');
-	exit;
+	require __DIR__ . '/../assets/page/inventory_tool/master-data-state.php';
 }
 ?>
 
@@ -66,6 +65,8 @@ if (($action === 'add' || $action === 'edit') && !$itemNotFound) {
 	echo '<div class="hi-empty"><div class="hi-empty__icon">📭</div><p>' . htmlspecialchars($translations['error_item_not_found']) . '</p></div>';
 } elseif ($action === 'delete') {
 	require __DIR__ . '/../assets/page/inventory_tool/item-delete-confirm.php';
+} elseif ($action === 'master_data') {
+	require __DIR__ . '/../assets/page/inventory_tool/master-data.php';
 } else {
 	require __DIR__ . '/../assets/page/inventory_tool/view-dispatch.php';
 }
