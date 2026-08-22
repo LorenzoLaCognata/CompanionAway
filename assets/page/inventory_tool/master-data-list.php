@@ -1,10 +1,6 @@
 <?php
 	$manageTopLevel = manageEntityTopLevel($db, $table);
-	$manageAddRootUrl = manageUrl($currentPage, $table, 'add');
 ?>
-		<div class="hi-manage-toolbar">
-			<a class="btn btn--amber btn--sm" href="<?= htmlspecialchars($manageAddRootUrl) ?>"><?= $translations[manageAddLabelKey($table, -1)] ?></a>
-		</div>
 <?php if (empty($manageTopLevel)): ?>
 		<div class="hi-empty">
 			<div class="hi-empty__icon">🗂️</div>

@@ -20,7 +20,7 @@
 			<div class="hi-tree">
 <?php foreach ($conts as $cont): $cn = (int)dbOne($db, 'SELECT COUNT(*) n FROM items WHERE bag_id = ? AND user_id = ?', [$cont['id'], currentUserId()])['n']; ?>
 				<a href="<?= sidebarLink('bag', (int)$cont['id']) ?>" class="hi-sidebar__link hi-sidebar__link--l1<?= $vtype === 'bag' && $vfilter == $cont['id'] ? ' hi-sidebar__link--active' : '' ?>">
-					<span class="hi-sidebar__icon"><?= htmlspecialchars($cont['icon']) ?></span><?= htmlspecialchars($cont['name']) ?><span class="hi-sidebar__count"><?= $cn ?></span>
+					<span class="hi-branch">↳</span><span class="hi-sidebar__icon"><?= htmlspecialchars($cont['icon']) ?></span><?= htmlspecialchars($cont['name']) ?><span class="hi-sidebar__count"><?= $cn ?></span>
 				</a>
 <?php endforeach; ?>
 			</div>

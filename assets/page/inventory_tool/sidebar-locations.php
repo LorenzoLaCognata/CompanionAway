@@ -25,13 +25,13 @@
 		$conts = locChildren($db, (int)$room['id']);
 ?>
 				<a href="<?= sidebarLink('location', (int)$room['id']) ?>" class="hi-sidebar__link hi-sidebar__link--l1<?= $vtype === 'location' && $vfilter == $room['id'] ? ' hi-sidebar__link--active' : '' ?>">
-					<span class="hi-sidebar__icon"><?= htmlspecialchars($room['icon']) ?></span><?= htmlspecialchars($room['name']) ?><span class="hi-sidebar__count"><?= $roomCount ?></span>
+					<span class="hi-branch">↳</span><span class="hi-sidebar__icon"><?= htmlspecialchars($room['icon']) ?></span><?= htmlspecialchars($room['name']) ?><span class="hi-sidebar__count"><?= $roomCount ?></span>
 				</a>
 <?php if (!empty($conts)): ?>
 				<div class="hi-tree hi-tree--l2">
 <?php foreach ($conts as $cont): $contCount = (int)dbOne($db, 'SELECT COUNT(*) n FROM items WHERE location_id = ? AND user_id = ?', [$cont['id'], currentUserId()])['n']; ?>
 					<a href="<?= sidebarLink('location', (int)$cont['id']) ?>" class="hi-sidebar__link hi-sidebar__link--l2<?= $vtype === 'location' && $vfilter == $cont['id'] ? ' hi-sidebar__link--active' : '' ?>">
-						<span class="hi-sidebar__icon"><?= htmlspecialchars($cont['icon']) ?></span><?= htmlspecialchars($cont['name']) ?><span class="hi-sidebar__count"><?= $contCount ?></span>
+						<span class="hi-branch">↳</span><span class="hi-sidebar__icon"><?= htmlspecialchars($cont['icon']) ?></span><?= htmlspecialchars($cont['name']) ?><span class="hi-sidebar__count"><?= $contCount ?></span>
 					</a>
 <?php endforeach; ?>
 				</div>
