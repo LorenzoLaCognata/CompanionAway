@@ -1,0 +1,38 @@
+{
+    "head_title": "Companion Away — Contattaci",
+    "head_meta_description": "Contatta Companion Away. Domande sul trasferimento o sulla pianificazione del viaggio? Invia un messaggio e ricevi presto una risposta.",
+    "head_meta_keywords": "contatta companion away, domande trasferimento, contatto pianificazione viaggio, mettersi in contatto",
+    "head_og_title": "Contatti — Companion Away",
+    "head_og_description": "Hai una domanda prima di iniziare? Invia un messaggio e ti risponderò personalmente.",
+
+    "header_logo": "Companion Away",
+    "hero_eyebrow": "Mettiamoci in contatto",
+    "hero_title_plain": "Parliamone",
+    "hero_title_em": "insieme.",
+    "hero_subtitle": "Domande sul trasferimento, sulla pianificazione del viaggio o su come funziona tutto questo? Invia un messaggio e ti risponderò personalmente.",
+    "hero_note": "Leggo ogni messaggio di persona — nessun bot, nessun modello preimpostato.",
+
+    "btn_send": "Invia messaggio →",
+
+    "contact_title_plain": "Invia un",
+    "contact_title_em": "messaggio",
+    "contact_desc": "Condividi qualche informazione e ciò che hai in mente — ti risponderò il prima possibile.",
+    "contact_first_name_label": "Nome *",
+    "contact_first_name_placeholder": "Il tuo nome",
+    "contact_last_name_label": "Cognome *",
+    "contact_last_name_placeholder": "Il tuo cognome",
+    "contact_email_label": "Email *",
+    "contact_email_placeholder": "tua@email.com",
+    "contact_phone_label": "Telefono (facoltativo)",
+    "contact_phone_placeholder": "+39 o +1...",
+    "contact_location_label": "Dove ti trovi attualmente? *",
+    "contact_location_placeholder": "Città, Paese — es. Milano, Italia",
+    "contact_message_label": "Il tuo messaggio *",
+    "contact_message_placeholder": "Cosa vorresti sapere?",
+
+    "error_submission": "Si è verificato un errore nell'invio del messaggio. Riprova tra un momento, oppure scrivi direttamente a contact@companionaway.com.",
+
+    "thankyou_title_plain": "Messaggio inviato,",
+    "thankyou_title_em": "grazie.",
+    "thankyou_sub": "Ho ricevuto il tuo messaggio e ti risponderò presto."
+}
