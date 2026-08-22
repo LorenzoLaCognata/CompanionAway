@@ -474,12 +474,12 @@
   position: relative;
 }
 
-.hi-table__indent-1,
-.hi-table__indent-2 {
+.hi-table td.hi-table__indent-1,
+.hi-table td.hi-table__indent-2 {
   padding-left: 44px;
 }
 
-.hi-table__indent-2 {
+.hi-table td.hi-table__indent-2 {
   padding-left: 92px;
 }
 
