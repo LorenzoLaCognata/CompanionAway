@@ -20,7 +20,7 @@
 		$action = $_POST['action'] ?? 'next';
 
 		if ($i === 1) {
-			$fields = ['firstName', 'lastName', 'email', 'phone', 'currentLocation', 'message'];
+			$fields = ['firstName', 'lastName', 'email', 'phone', 'message'];
 		} else {
 			$fields = [];
 		}
@@ -39,7 +39,6 @@
 				$lastName = $_SESSION['data']['lastName'] ?? '';
 				$email = $_SESSION['data']['email'] ?? '';
 				$phone = $_SESSION['data']['phone'] ?? '';
-				$currentLocation = $_SESSION['data']['currentLocation'] ?? '';
 				$message = $_SESSION['data']['message'] ?? '';
 
 				$dbSaved = false;
@@ -49,7 +48,6 @@
 					'lastName' => $lastName,
 					'email' => $email,
 					'phone' => $phone,
-					'currentLocation' => $currentLocation,
 					'message' => $message,
 				]);
 
@@ -72,7 +70,6 @@
 				$body .= '- Name: ' . $firstName . ' ' . $lastName . "\n";
 				$body .= '- Email: ' . $email . "\n";
 				$body .= '- Phone: ' . $phone . "\n";
-				$body .= '- Current Location: ' . $currentLocation . "\n";
 				$body .= '- Message: ' . $message . "\n";
 				$headers = 'From: companionaway@altervista.org' . "\r\n" .
 					'Reply-To: ' . $email . "\r\n" .
