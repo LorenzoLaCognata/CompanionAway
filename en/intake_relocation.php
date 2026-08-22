@@ -110,7 +110,7 @@
 				$body .= '- How Found: ' . $_SESSION['data']['howFound'] . "\n";
 				$body .= '- Final Notes: ' . $_SESSION['data']['finalNotes'] . "\n";
 				$headers = 'From: companionaway@altervista.org' . "\r\n" .
-				'Reply-To: ' . $_SESSION['data']['email'] . "\r\n" .
+					'Reply-To: ' . $_SESSION['data']['email'] . "\r\n" .
 					'Cc: companionaway@altervista.org,companionaway@gmail.com' . "\r\n" .
 					'Content-Type: text/plain; charset=UTF-8';
 				$sent = mail($to, $subject, $body, $headers);
