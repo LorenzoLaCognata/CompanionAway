@@ -98,7 +98,7 @@
 				$submissionId = ca_submission_save('travel', $_SESSION['data']);
 
 				$sent = false;
-				$to = 'companionaway@altervista.org,companionaway@gmail.com';
+				$to = 'contact@companionaway.com';
 				$subject = 'Companion Away - Nuovo Viaggio: ' . $_SESSION['data']['firstName'] . ' ' . $_SESSION['data']['lastName'];
 				$body = "Nuova richiesta di supporto ricevuta:\n\n";
 				$body .= '- Name: ' . $_SESSION['data']['firstName'] . ' ' . $_SESSION['data']['lastName'] . "\n";
@@ -137,7 +137,7 @@
 				$body .= '- Final Notes: ' . $_SESSION['data']['finalNotes'] . "\n";
 				$headers = 'From: companionaway@altervista.org' . "\r\n" .
 					'Reply-To: ' . $_SESSION['data']['email'] . "\r\n" .
-					'Cc: giulia.carla20@gmail.com' . "\r\n" .
+					'Cc: companionaway@altervista.org,companionaway@gmail.com' . "\r\n" .
 					'Content-Type: text/plain; charset=UTF-8';
 				$sent = mail($to, $subject, $body, $headers);
 
