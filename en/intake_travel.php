@@ -8,11 +8,30 @@
 	$pageStylesheet = '/assets/css/intake-style.min.css';
 ?>
 
-<?
+<?php
 
 	session_start();
 
+	require_once '../assets/page/cookie_consent/functional-consent.php';
+	require_once '../assets/page/analytics/funnel-log.php';
+	require_once '../assets/page/intake_shared/submission-log.php';
+
 	$i = isset($_GET['step']) ? (int) $_GET['step'] : 1;
+
+	if ($_SERVER['REQUEST_METHOD'] !== 'POST' && $i === 1 && empty($_SESSION['data']) && ca_functional_allowed() && isset($_COOKIE['ca_resume_travel'])) {
+		$draft = ca_draft_load($_COOKIE['ca_resume_travel'], 'travel');
+		if ($draft) {
+			$_SESSION['data'] = $draft['data'];
+			if ($draft['step'] > 1) {
+				header('Location: ' . $currentPage . '?step=' . $draft['step']);
+				exit;
+			}
+		}
+	}
+
+	if ($_SERVER['REQUEST_METHOD'] !== 'POST' && $i === 1 && empty($_SESSION['data'])) {
+		ca_funnel_log_once('travel', 1);
+	}
 	
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -47,14 +66,38 @@
 		}
 
 		if ($action === 'next') {
+
+			ca_funnel_log_once('travel', $i + 1);
+
+			if (ca_functional_allowed()) {
+				if (!isset($_COOKIE['ca_resume_travel'])) {
+					$token = bin2hex(random_bytes(16));
+					setcookie('ca_resume_travel', $token, [
+						'expires' => time() + 60 * 60 * 24 * 30,
+						'path' => '/',
+						'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
+						'httponly' => true,
+						'samesite' => 'Lax',
+					]);
+					$_COOKIE['ca_resume_travel'] = $token;
+				}
+				ca_draft_save($_COOKIE['ca_resume_travel'], 'travel', $i + 1, $_SESSION['data']);
+			}
+
 			header('Location: ' . $currentPage . '?step=' . ($i+1));
 			exit;
 		} elseif ($action === 'prev') {
 			header('Location: ' . $currentPage . '?step=' . ($i-1));
 			exit;
 		} elseif ($action === 'submit') {
-	
+
+			$submitError = false;
+
 			if (empty($_POST['website'])) {
+
+				$submissionId = ca_submission_save('travel', $_SESSION['data']);
+
+				$sent = false;
 				$to = 'contact@companionaway.com';
 				$subject = 'Companion Away - New Trip: ' . $_SESSION['data']['firstName'] . ' ' . $_SESSION['data']['lastName'];
 				$body = "New intake request received:\n\n";
@@ -97,9 +140,23 @@
 					'Cc: companionaway@altervista.org,companionaway@gmail.com' . "\r\n" .
 					'Content-Type: text/plain; charset=UTF-8';
 				$sent = mail($to, $subject, $body, $headers);
+
+				if ($submissionId !== null) {
+					ca_submission_mark_sent($submissionId, $sent);
+				} elseif (!$sent) {
+					$submitError = true;
+				}
 			}
-			
-			if ($sent) {
+
+			if (!$submitError) {
+				ca_funnel_log('travel', $i + 1, true);
+				if (isset($_COOKIE['ca_resume_travel'])) {
+					ca_draft_delete($_COOKIE['ca_resume_travel'], 'travel');
+					setcookie('ca_resume_travel', '', [
+						'expires' => time() - 3600,
+						'path' => '/',
+					]);
+				}
 				unset($_SESSION['data']);
 				header('Location: ' . $currentPage . '?step=' . ($i+1));
 				exit;

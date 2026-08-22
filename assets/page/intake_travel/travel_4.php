@@ -4,6 +4,10 @@
 					<h2 class="intake-section-title"><?= $translations['summary_title_plain'] ?> <em><?= $translations['summary_title_em'] ?></em></h2>
 					<p class="intake-section-desc"><?= $translations['summary_desc'] ?></p>
 
+					<?php if (!empty($submitError)): ?>
+						<div class="intake-error"><?= $translations['submit_error'] ?></div>
+					<?php endif; ?>
+
 					<div class="intake-summary-grid">
 
 						<div class="intake-summary-card">
@@ -121,6 +125,13 @@
 
 					</div>
 
+
+					<div class="intake-check-group intake-single intake-agree">
+						<label class="intake-check-option">
+							<input type="checkbox" name="agreeTerms" required>
+							<span><?= $translations['agree_pre'] ?> <a href="/<?= $lang ?>/terms.php" target="_blank" rel="noopener"><?= $translations['agree_link_text'] ?></a><?= $translations['agree_post'] ?></span>
+						</label>
+					</div>
 
 					<div class="intake-nav-row">
 						<button class="intake-btn-back" type="submit" name="action" value="prev"><?= $translations['btn_back'] ?></button>

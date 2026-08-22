@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="<?= $lang ?>">
 	<head>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2KTKK3SNWY"></script>
+		<!-- Google tag (gtag.js) — only loaded once analytics cookies are accepted, see footer.php -->
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
-
-			gtag('config', 'G-2KTKK3SNWY');
+			gtag('consent', 'default', {
+				analytics_storage: 'denied',
+				ad_storage: 'denied',
+				ad_user_data: 'denied',
+				ad_personalization: 'denied'
+			});
 		</script>
 
 <?php
@@ -40,6 +43,7 @@
 		<link rel="icon" type="image/png" sizes="48x48" href="/favicon.ico">
 
 		<link rel="stylesheet" href="/assets/css/main-style.min.css">
+		<link rel="stylesheet" href="/assets/css/cookie-consent-style.min.css">
 <?php foreach ((array) $pageStylesheet as $sheet) { ?>
 		<link rel="stylesheet" href="<?= $sheet ?>">
 <?php } ?>
