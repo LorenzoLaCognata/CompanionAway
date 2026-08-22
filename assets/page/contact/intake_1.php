@@ -14,9 +14,6 @@
 						<div class="intake-field"><label><?= $translations['contact_phone_label'] ?></label><input type="tel" name="phone" value="<?= htmlspecialchars($_SESSION['data']['phone'] ?? '') ?>" placeholder="<?= $translations['contact_phone_placeholder'] ?>"></div>
 					</div>
 					<div class="intake-form-row intake-full">
-						<div class="intake-field"><label><?= $translations['contact_location_label'] ?></label><input type="text" name="currentLocation" value="<?= htmlspecialchars($_SESSION['data']['currentLocation'] ?? '') ?>" placeholder="<?= $translations['contact_location_placeholder'] ?>" required></div>
-					</div>
-					<div class="intake-form-row intake-full">
 						<div class="intake-field"><label><?= $translations['contact_message_label'] ?></label><textarea name="message" placeholder="<?= $translations['contact_message_placeholder'] ?>" required><?= htmlspecialchars($_SESSION['data']['message'] ?? '') ?></textarea></div>
 					</div>
 					<div class="intake-hp-field"><label for="website"></label><input type="text" name="website" id="website" tabindex="-1" autocomplete="off"></div>
