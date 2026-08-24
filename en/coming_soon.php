@@ -15,7 +15,8 @@
 						Something<br><em>exciting</em><br>is coming.
 					</h1>
 
-					<p class="hero__body">We're building something special. Check back soon.</p>
+					<p class="hero__body">We're building something special. Stay tuned!</p>
+					<p class="hero__body">In the meantime, explore the rest of the website and don't hesitate to reach out if you have any questions.</p>
 
 					<a href="<?= $homeSlug ?>">← Back to home</a>
 

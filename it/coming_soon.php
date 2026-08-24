@@ -15,7 +15,8 @@
 						Qualcosa di<br><em>entusiasmante</em><br>sta per arrivare.
 					</h1>
 
-					<p class="hero__body">Stiamo creando qualcosa di speciale. Tornate a trovarci presto.</p>
+					<p class="hero__body">Stiamo creando qualcosa di speciale. Restate sintonizzati!</p>
+					<p class="hero__body">Nel frattempo, esplora il resto del sito e non esitare a contattarmi per qualsiasi domanda.</p>
 
 					<a href="<?= $homeSlug ?>">← Torna alla home</a>
 
