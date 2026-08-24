@@ -76,10 +76,10 @@
     "locked_plan_settler_name": "Settler",
     "locked_plan_settler_price": "$159 · one-time",
     "locked_plan_settler_was": "$189",
-    "locked_plan_settler_features": "Full guide · 30-day offline support · 2 revisions · replies within 72h",
+    "locked_plan_settler_features": "Full guide · 14-day offline support · 1 revision · replies within 72h",
     "locked_plan_roots_name": "Roots",
-    "locked_plan_roots_price": "$239 · one-time",
-    "locked_plan_roots_was": "$299",
-    "locked_plan_roots_features": "Full guide · 90-day priority support · 2 revisions · replies within 24h",
+    "locked_plan_roots_price": "$209 · one-time",
+    "locked_plan_roots_was": "$269",
+    "locked_plan_roots_features": "Full guide · 90-day offline support · 2 revisions · replies within 48h",
     "locked_cta": "See plans &amp; get started &#8594;"
 }

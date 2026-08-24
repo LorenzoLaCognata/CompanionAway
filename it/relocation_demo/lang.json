@@ -5,7 +5,7 @@
     "head_og_title": "Companion Away — Una guida al trasferimento costruita attorno a te",
     "head_og_description": "Ecco come potrebbe essere la tua guida al trasferimento — su misura per la tua destinazione, la tua tabella di marcia e la tua vita. Non un modello generico. Una guida che conosce il tuo trasferimento.",
 
-    "header_banner_text": "<strong>Stai visualizzando una guida di esempio gratuita.</strong> Questo è un esempio dell'output che riceverai — personalizzato interamente sulla tua situazione.",
+    "header_banner_text": "<strong>Stai visualizzando una guida di esempio gratuita.</strong> Esplora la demo per avere un'idea di quello che riceverai secondo la tue richieste e preferenze.",
     "header_banner_cta": "Vedi piani &amp; prezzi &#8594;",
     "header_back_label": "Torna alla homepage",
 
@@ -32,11 +32,11 @@
     "locked_plan_settler_name": "Settler",
     "locked_plan_settler_price": "$159 · una-tantum",
     "locked_plan_settler_was": "$189",
-    "locked_plan_settler_features": "Guida completa · supporto offline 30 giorni · 2 revisioni · risposte entro 72h",
+    "locked_plan_settler_features": "Guida completa · supporto offline 14 giorni · 1 revisione · risposte entro 72h",
     "locked_plan_roots_name": "Roots",
-    "locked_plan_roots_price": "$239 · una-tantum",
-    "locked_plan_roots_was": "$299",
-    "locked_plan_roots_features": "Guida completa · supporto prioritario 90 giorni · 2 revisioni · risposte entro 24h",
+    "locked_plan_roots_price": "$209 · una-tantum",
+    "locked_plan_roots_was": "$269",
+    "locked_plan_roots_features": "Guida completa · supporto offline 90 giorni · 2 revisioni · risposte entro 48h",
     "locked_cta": "Scopri i piani e inizia &#8594;",
 
     "overview_eyebrow": "Sezione 1",
