@@ -38,9 +38,12 @@
 .top-bar-back:hover { background: rgba(255, 255, 255, .18); }
 
 .top-bar-text {
+  font-family: var(--font-body);
+  font-weight: 300;
   font-size: var(--text-sm);
   color: #fff;
   line-height: 1.5;
+  margin: 0;
 }
 
 .top-bar-text strong {

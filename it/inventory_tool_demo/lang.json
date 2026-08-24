@@ -76,11 +76,11 @@
     "locked_plan_settler_name": "Settler",
     "locked_plan_settler_price": "$159 · una-tantum",
     "locked_plan_settler_was": "$189",
-    "locked_plan_settler_features": "Guida completa · supporto offline 30 giorni · 2 revisioni · risposte entro 72h",
+    "locked_plan_settler_features": "Guida completa · supporto offline 14 giorni · 1 revisione · risposte entro 72h",
     "locked_plan_roots_name": "Roots",
-    "locked_plan_roots_price": "$239 · una-tantum",
-    "locked_plan_roots_was": "$299",
-    "locked_plan_roots_features": "Guida completa · supporto prioritario 90 giorni · 2 revisioni · risposte entro 24h",
+    "locked_plan_roots_price": "$209 · una-tantum",
+    "locked_plan_roots_was": "$269",
+    "locked_plan_roots_features": "Guida completa · supporto offline 90 giorni · 2 revisioni · risposte entro 48h",
     "locked_cta": "Scopri i piani e inizia &#8594;"
 
 }
