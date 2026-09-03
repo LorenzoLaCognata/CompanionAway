@@ -18,6 +18,10 @@
 
 	$i = isset($_GET['step']) ? (int) $_GET['step'] : 1;
 
+	if ($_SERVER['REQUEST_METHOD'] !== 'POST' && $i === 1) {
+		$_SESSION['form_started_at'] = time();
+	}
+
 	if ($_SERVER['REQUEST_METHOD'] !== 'POST' && $i === 1 && empty($_SESSION['data']) && ca_functional_allowed() && isset($_COOKIE['ca_resume_travel'])) {
 		$draft = ca_draft_load($_COOKIE['ca_resume_travel'], 'travel');
 		if ($draft) {
@@ -93,7 +97,10 @@
 
 			$submitError = false;
 
-			if (empty($_POST['website'])) {
+			$formStartedAt = $_SESSION['form_started_at'] ?? 0;
+			$formElapsed = time() - $formStartedAt;
+
+			if (empty($_POST['website']) && $formStartedAt > 0 && $formElapsed >= 3) {
 
 				$submissionId = ca_submission_save('travel', $_SESSION['data']);
 
@@ -158,6 +165,7 @@
 					]);
 				}
 				unset($_SESSION['data']);
+				unset($_SESSION['form_started_at']);
 				header('Location: ' . $currentPage . '?step=' . ($i+1));
 				exit;
 			}
