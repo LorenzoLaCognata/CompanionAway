@@ -3,7 +3,6 @@
     "pricing_h2": "Scegli cosa<br><em>funziona per te.</em>",
     "pricing_intro": "Piani una tantum — nessun abbonamento. La guida è tua per sempre.",
     "pricing_launch_banner": "<strong>Companion Away è appena nato.</strong> I primi clienti otterranno la tariffa riservata ai soci fondatori — bloccata per sempre, non sarà mai più disponibile a questi prezzi.",
-
     "pricing_free_tag": "Free",
     "pricing_free_name": "Explorer",
     "pricing_free_tagline": "Dai un'occhiata",
@@ -11,7 +10,6 @@
     "pricing_free_desc": "Esplora la piattaforma e scopri come appare una vera guida di trasferimento personalizzata.",
     "pricing_free_feat_1": "Guida di esempio",
     "pricing_free_feat_2": "Accesso alla piattaforma",
-
     "pricing_settler_badge": "✦ Founding member",
     "pricing_settler_tag": "One-time",
     "pricing_settler_name": "Settler",
@@ -28,7 +26,6 @@
     "pricing_settler_feat_5": "Supporto offline 14 giorni",
     "pricing_settler_feat_6_off": "Consegna prioritaria",
     "pricing_settler_feat_7_off": "Check-in mensile",
-
     "pricing_roots_badge": "✦ Founding member",
     "pricing_roots_tag": "Premium",
     "pricing_roots_name": "Roots",
@@ -45,18 +42,15 @@
     "pricing_roots_feat_5": "Supporto offline 90 giorni",
     "pricing_roots_feat_6": "Consegna prioritaria (5–7 giorni)",
     "pricing_roots_feat_7": "Check-in mensile per 3 mesi",
-
     "pricing_promo_title": "Combina la guida al trasferimento con un viaggio d'esplorazione. La stessa persona, un supporto continuo.",
     "pricing_promo_link_text": "viaggio",
     "pricing_promo_text_before": "Aggiungi uno dei pacchetti vacanza descritti nella pagina ",
     "pricing_promo_text_after": " e <strong>risparmia $30</strong> sul pacchetto vacanza che scegli.<br>Tutti i bundle includono le stesse funzionalità di trasferimento del piano singolo (inventario, round di revisione, livello di supporto).<br>I livelli di viaggio nei bundle rimangono flessibili — durata e prezzo finali confermati dopo la revisione del questionario.",
-
     "head_title": "Companion Away — Guide al Trasferimento Personalizzate — Da $159",
     "head_meta_description": "Companion Away — una guida al trasferimento costruita interamente intorno al tuo viaggio e alle tue tempistiche. Creata a mano da chi ci è già passato, non generata dall'IA",
     "head_meta_keywords": "guida al trasferimento personalizzata, prezzi guida trasferimento, servizio trasferimento expat, guida per trasferirsi all'estero, piano di trasferimento personalizzato, servizio checklist trasferimento",
     "head_og_title": "Companion Away — Guide al Trasferimento Personalizzate — Costruite Intorno al Tuo Trasloco",
     "head_og_description": "Salta le solite checklist generiche. Ricevi una guida al trasferimento creata interamente in base alla tua situazione — le tue tempistiche, le tue preoccupazioni. Un supporto reale da chi lo ha già vissuto",
-
     "hero_eyebrow": "Trasferimento · Su misura · Fatto per te",
     "hero_title": "Trasferirsi da qualche parte di nuovo<br>è emozionante.<br><em>La burocrazia,<br>meno.</em>",
     "hero_sub": "Una guida di trasferimento completamente personalizzata — costruita dal tuo questionario, accessibile sulla piattaforma, con supporto reale quando ne hai bisogno.",
@@ -80,7 +74,6 @@
     "hero_item_7_desc": "Ottenere una patente locale, l'assicurazione auto e cosa è valido nel frattempo.",
     "hero_item_8_title": "+ altro in base alla tua situazione",
     "hero_item_8_desc": "Scuole, animali domestici, ricerca di lavoro, utenze, spedizioni — aggiunti alla tua guida in base al tuo questionario.",
-
     "wyg_eyebrow": "Come accedere alla tua guida",
     "wyg_h2": "Non un semplice PDF.<br><em>Un portale personalizzato solo per te.</em>",
     "wyg_intro": "Al momento dell'acquisto, riceverai i dati di accesso a una sezione privata di questa piattaforma dove troverai la tua guida al trasferimento. Non si tratta di un download singolo. Non è un documento statico.<br>Potrai consultarla in qualsiasi momento, condividerla con il tuo partner o con la tua famiglia e riguardarla tutte le volte che ne avrai bisogno.",
@@ -90,11 +83,9 @@
     "wyg_card_2_desc": "Accedi alla tua guida in qualsiasi momento, da qualsiasi dispositivo. Checklist interattive da spuntare man mano che avanzi. Non è un documento da scaricare e perdere.",
     "wyg_card_3_title": "Supporto reale incluso",
     "wyg_card_3_desc": "Le domande sorgono sempre dopo aver ricevuto la guida. Fai le tue domande in qualsiasi momento tramite la piattaforma: riceverai una risposta reale nei tempi previsti dal tuo piano, nei giorni lavorativi.",
-
     "qcta_title": "Pronto a iniziare<br><em>il tuo prossimo capitolo?</em>",
     "qcta_sub": "Compila il questionario — ci vogliono circa 5 minuti e diventa la base di tutto ciò che creerò per te.",
     "qcta_button": "Compila il questionario →",
-
     "faq_eyebrow": "Domande",
     "faq_h2": "FAQ",
     "faq_q1": "Funziona per qualsiasi destinazione?",
@@ -109,24 +100,9 @@
     "faq_a5": "Puoi scrivermi direttamente tramite la piattaforma con qualsiasi domanda — nei giorni lavorativi, esclusi weekend e festivi. Nessun appuntamento, nessuno stress con i fusi orari. Scrivi quando ti fa comodo, rispondo entro 72h (Settler) o 48h (Roots). Pensaci come avere qualcuno di competente disponibile, senza la formalità di un appuntamento fissato.",
     "faq_q6": "Posso avere un rimborso?",
     "faq_a6": "Se richiedi un rimborso prima che inizi a lavorare sulla tua guida, verrà emesso un rimborso completo. Una volta ricevuta la conferma che il lavoro è iniziato, i rimborsi non sono disponibili — ma applicherò sempre prima un round di revisione se qualcosa non va. Non sei sicura? Guarda la guida di esempio gratuita prima di acquistare.",
-
-    "hiw_eyebrow": "Come funziona",
-    "hiw_h2": "Dal questionario<br><em>alla tua guida.</em>",
-    "hiw_intro": "Quattro passi. Nessuna sorpresa.",
-    "hiw_step1_title": "Compila il questionario",
-    "hiw_step1_desc": "Raccontami del tuo trasferimento — origine, destinazione, tempistiche e cosa ti preoccupa di più.",
-    "hiw_step1_sub": "~5-8 minuti",
-    "hiw_step2_title": "Scegli il piano e paga",
-    "hiw_step2_desc": "Scegli il piano più adatto. Il pagamento avviene alla fine del questionario — nessuna sorpresa.",
-    "hiw_step3_title": "Costruisco la tua guida",
-    "hiw_step3_desc": "Leggo le tue risposte e costruisco la tua guida personalizzata da zero.",
-    "hiw_step3_sub": "Settler: 7-10 giorni lavorativi · Roots: 5-7",
-    "hiw_step4_title": "Accedi e fai domande",
-    "hiw_step4_desc": "La tua guida è sulla piattaforma. Usa il supporto, richiedi revisioni, tieni traccia della checklist.",
     "hiw_demo_title": "Non sei ancora sicuro?<br><em>Guarda un esempio.</em>",
     "hiw_demo_desc": "Una guida di esempio realistica costruita per un profilo campione — vedi il formato, il livello di dettaglio e di personalizzazione prima di impegnarti in qualcosa.",
     "hiw_demo_cta": "Guarda l'esempio gratuito →",
-
     "inv_label": "✦ Strumento bonus — incluso in ogni piano",
     "inv_title": "Lo Strumento di Inventario<br><em>per il Trasferimento</em>",
     "inv_desc": "Prima di mettere in valigia anche solo una cosa — sai esattamente cosa porti, cosa lasci e cosa deve ancora essere deciso. Un solo strumento, tutto in un posto: nessuna app separata da scaricare, nessun altro abbonamento da pagare. Nato dall'esperienza reale di stare in mezzo a un appartamento pieno chiedendosi da dove cominciare.",

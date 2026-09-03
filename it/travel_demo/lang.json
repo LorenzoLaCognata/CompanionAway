@@ -1,24 +1,20 @@
 {
-	"head_title": "Companion Away — Itinerario di esempio: Chicago",
-	"head_meta_description": "Scopri un itinerario di viaggio di esempio di Companion Away — guarda come trasformiamo la tua destinazione, i tuoi interessi e il tuo stile di viaggio in un itinerario personalizzato costruito attorno a te.",
-	"head_meta_keywords": "esempio itinerario di viaggio, guida viaggio di esempio, demo itinerario di viaggio personalizzato, cosa contiene un itinerario di viaggio, anteprima guida di viaggio Chicago",
-	"head_og_title": "Companion Away — Un itinerario di viaggio costruito attorno a te",
-	"head_og_description": "Ecco come potrebbe apparire il tuo itinerario di viaggio — su misura per la tua destinazione, i tuoi interessi e il tuo stile di viaggio. Non un modello preimpostato. Un itinerario che conosce le tue esigenze.",
-
-	"header_banner_text": "<strong>Stai visualizzando un itinerario di esempio gratuito.</strong> Esplora la demo per avere un'idea di quello che riceverai secondo la tue richieste e preferenze.",
-	"header_banner_cta": "Vedi piani &amp; prezzi &#8594;",
-	"header_back_label": "Torna alla homepage",
-
-	"sidebar_logo": "Companion Away",
-	"sidebar_sub": "Itinerario di viaggio",
-	"sidebar_label_guide": "Il tuo itinerario",
-	"sidebar_nav_day_1": "Giorno 1",
-	"sidebar_nav_day_2": "Giorno 2",
-	"sidebar_nav_day_3": "Giorno 3",
-
+    "head_title": "Companion Away — Itinerario di esempio: Chicago",
+    "head_meta_description": "Scopri un itinerario di viaggio di esempio di Companion Away — guarda come trasformiamo la tua destinazione, i tuoi interessi e il tuo stile di viaggio in un itinerario personalizzato costruito attorno a te.",
+    "head_meta_keywords": "esempio itinerario di viaggio, guida viaggio di esempio, demo itinerario di viaggio personalizzato, cosa contiene un itinerario di viaggio, anteprima guida di viaggio Chicago",
+    "head_og_title": "Companion Away — Un itinerario di viaggio costruito attorno a te",
+    "head_og_description": "Ecco come potrebbe apparire il tuo itinerario di viaggio — su misura per la tua destinazione, i tuoi interessi e il tuo stile di viaggio. Non un modello preimpostato. Un itinerario che conosce le tue esigenze.",
+    "header_banner_text": "<strong>Stai visualizzando un itinerario di esempio gratuito.</strong> Esplora la demo per avere un'idea di quello che riceverai secondo la tue richieste e preferenze.",
+    "header_banner_cta": "Vedi piani &amp; prezzi &#8594;",
+    "header_back_label": "Torna alla homepage",
+    "sidebar_logo": "Companion Away",
+    "sidebar_sub": "Itinerario di viaggio",
+    "sidebar_label_guide": "Il tuo itinerario",
+    "sidebar_nav_day_1": "Giorno 1",
+    "sidebar_nav_day_2": "Giorno 2",
+    "sidebar_nav_day_3": "Giorno 3",
     "note_personal": "Ogni scelta in questa guida nasce dalla comprensione reale di quello che volete: cultura del cibo, non Instagram. Posti autentici, frequentati dai locals, non trappole turistiche. Questa guida è costruita appositamente per voi.",
     "note_timing": "Gli orari qui sotto soltanto indicativi — potete seguirli o decidere di ignorarli del tutto. Se preferite passare il pomeriggio a riposare invece di camminare, fatelo. Se volete rimanere a pranzo piu' a lungo, siete liberi di farlo. Tutto è flessibile.",
-
     "overview_label": "Il tuo programma della giornata",
     "overview_morning": "Mattina:",
     "overview_morning_text": "Arrivo in hotel, passeggiata nel quartiere West Loop",
@@ -28,7 +24,6 @@
     "overview_afternoon_text": "Riposo in hotel, passeggiata nello storico quartiere Loop",
     "overview_dinner": "Cena",
     "overview_dinner_text": "vicino all'hotel",
-
     "info_box_label": "Dal tuo questionario",
     "info_destination_label": "Partenza e Destinazione",
     "info_destination_value": "Milano - Chicago O'Hare",
@@ -42,15 +37,11 @@
     "info_priority_value": "Cultura gastronomica, posti locali",
     "info_pace_label": "Ritmo",
     "info_pace_value": "Rilassato",
-
     "day_title": "Venerdì 19 luglio",
-
     "arrival_time": "9:00 – Arrivo",
     "arrival_text": "L'aereo atterra alle 9, per arrivare in Downtown potete comodamente prendere la Blue Line (parte dal terminal ogni 5-10 minuti, il costo e' di $5 a persona e il viaggio fino al centro dura circa 45 minuti). Se arrivate ai Terminal 1, 2 o 3 (opzione che include chi fa scalo a Dublino, unico aeroporto europeo con Pre-Clearance, o chiunque voli con uno scalo intermedio negli Stati Uniti), allora atterrerete come se foste su un volo locale, quindi una volta ritirati gli eventuali bagagli al nastro del terminal di arrivo vi troverete già nell'area pubblica pre-sicurezza. Da qui bastera’ seguire i cartelli con la scritta CTA Trains o Trains to City, si scendono le scale mobili verso il livello inferiore del Terminal 2. I tunnel pedonali al coperto, dotati di tapis roulant, portano direttamente e in meno di 10 minuti di cammino ai tornelli della metropolitana. Se invece arrivate al Terminal 5 dei voli Internazionali allora dovrete obbligatoriamente fare la fila all'immigrazione USA, ritirare le valigie e superare i controlli doganali all’arrivo a Chicago. Una volta fuori dalla porta della dogana vi servira’ salire al piano superiore e prendere l'ATS (Airport Transit System), la monorotaia sopraelevata gratuita che passa ogni pochi minuti e scendere alla fermata del Terminal 2, entrare nell'aeroporto e seguire i cartelli CTA Trains e le indicazioni dscritte in precedenza. La fermata piu' vicina al vostro hotel e' Monroe, l'hotel dista circa 300 metri a piedi. In base alla necessita' di effettuare i controlli doganali o meno, arriverete in hotel in tarda mattinata e potrete lasciare i bagagli alla reception poiche' il check-in è previsto dalle ore 15.",
-
     "west_loop_time": "11:00 – West Loop",
     "west_loop_text": "Una volta lasciati i bagagli in hotel, potrete concedervi una passeggiata panoramica di circa mezz'ora verso il quartiere West Loop, il vero cuore pulsante della cultura gastronomica di Chicago. Uscendo dall’hotel su Michigan Avenue, camminate verso nord per due isolati fino al ponte sul fiume. Da lì, scendete le scale per immettervi sul Riverwalk e proseguite lungo la sponda del fiume verso ovest: questo tratto pedonale è spettacolare, costellato di bar e installazioni d'arte, all'ombra dei grattacieli. Seguite il percorso fino alla fine, dove il fiume si divide in tre rami all'altezza di Wolf Point e della Salesforce Tower, quindi risalite al livello della strada su Wacker Drive. Attraversate il fiume verso ovest sul ponte di Lake Street – godendovi la vista sul gigantesco e storico Merchandise Mart – e imboccate W Fulton Street. Camminando lungo questa via vi ritroverete direttamente tra i vecchi magazzini in mattoni rossi di Fulton Market. È questa l'anima più autentica della zona: tra piccoli produttori locali, botteghe storiche dove i grandi ristoranti si riforniscono ogni mattina e gallerie d'arte indipendenti. Questo è il posto dove gli stessi chef si siedono a mangiare a fine turno. Prendetevi il vostro tempo. Non state facendo semplice turismo, state scoprendo come questa città pensa e vive il cibo.",
-
     "lunch_time": "13:00 – Pranzo",
     "lunch_intro": "Per cominciare a scoprire il vero cibo di Chicago, ecco tre opzioni diverse. Sono tutte nel quartiere West Loop, dove state passeggiando. Ognuna vi racconta qualcosa di diverso sulla cultura del cibo in questa città.",
     "lunch_option_1_name": "Green Street Smoked Meats",
@@ -59,16 +50,12 @@
     "lunch_option_2_detail": "800 W Randolph St. <a href=\"https://www.auchevaldiner.com/chicago/home\" target=\"_blank\">auchevaldiner.com</a> Il burger leggendario di Chicago. Dimenticate i fast food: qui il cheeseburger viene elevato a opera d'arte culinaria, con bacon spessissimo glassato al dattero e uovo al tegamino. È il locale che ha ridefinito la scena dei diner americani. Non si accettano prenotazioni e le code fuori dalla porta fanno ormai parte dell'esperienza, ma l'attesa al bancone in penombra, avvolti da un'atmosfera jazz e rétro, vale ogni singolo minuto. $30–45 a persona.",
     "lunch_option_3_name": "Avec",
     "lunch_option_3_detail": "615 W Randolph St. <a href=\"https://www.avecrestaurant.com\" target=\"_blank\">avecrestaurant.com</a> Un rifugio intimo e vibrante, dove il legno scuro delle pareti crea l'illusione di trovarsi dentro una moderna botte di vino. La cucina propone piccoli piatti di ispirazione mediterranea pensati per essere condivisi al centro del tavolo, come i loro celebri datteri ripieni di chorizo avvolti nel bacon. Sedetevi al bancone, ordinate un calice da un'accurata selezione di vitigni artigianali e prendetevela con calma. Questo è il posto perfetto per una cena rilassata e di grande ricerca. $55–80 a persona.",
-
     "back_hotel_time": "14:30 – Ritorno in hotel",
     "back_hotel_text": "Tornate con calma verso l’hotel attraverso un itinerario completamente diverso dall’andata, che vi farà scoprire l'anima storica e monumentale del centro. Camminate verso est lungo W Randolph Street, storica via alberata alberata, che unisce West Loop al centro finanziario. Continuando a camminare verso est, attraverserete il fiume Chicago sul monumentale ponte mobile di Randolph, che offre uno scorcio fotografico pazzesco sui grattacieli che si riflettono nell'acqua. Una volta superato il fiume, vi addentrerete ufficialmente nei maestosi 'canyon' del Loop e a camminare sotto la storica struttura in ferro della metropolitana sopraelevata (la famosa 'L') all'incrocio con Wells Street: lo sferragliare dei treni sopra le vostre teste è la colonna sonora più autentica di Chicago. Proseguite ancora su Randolph Street ed entrerete nel vivo del Theatre District, passando sotto le monumentali insegne luminose al neon del Cadillac Palace e del celebre Nederlander Theatre. Superato il distretto dei teatri e incrociata State Street, l'ultimo isolato vi farà sbucare su Michigan Avenue. Svoltate a destra e dopo pochissimi passi sarete di nuovo all'ingresso del vostro hotel, proprio di fronte alle luci del Millennium Park.",
-
     "rest_time": "15:00 – Riposo",
     "rest_text": "Fate il check-in ufficiale, doccia, relax. Decidete voi se preferite riposare di piu' o uscire ad esplorare ancora.",
-
     "river_north_time": "16:30 – Loop",
     "river_north_text": "Dedicate il resto del pomeriggio ad una camminata senza vera meta nel Loop, il quartiere storico in cui alloggiate, per iniziare a prendere confidenza con la città. Uscendo dall’hotel sarete su Michigan Avenue: non fate programmi, iniziate semplicemente a camminare tra i maestosi grattacieli e ad addentrarvi nelle vie interne del quartiere. Alzate lo sguardo verso la struttura in ferro della metropolitana sopraelevata che gira sopra le vostre teste, curiosate tra i caffè, i cortili nascosti e le imponenti sculture d'arte pubblica che spuntano tra i palazzi, respirerete l'atmosfera reale della citta’. Nessun programma rigido, nessuna tabella di marcia. Camminate, esplorate ed osservate.",
-
     "dinner_time": "20:00 – Cena",
     "dinner_intro": "Tre opzioni, ognuna delle quali rivela qualcosa di diverso sulla cultura gastronomica di Chicago.",
     "dinner_option_1_name": "Lou Malnati's Pizzeria",
@@ -77,11 +64,9 @@
     "dinner_option_2_detail": "17 W Adams St. <a href=\"https://www.theberghoff.com\" target=\"_blank\">theberghoff.com</a> Un tuffo nella storia di Chicago. Aperto dal 1898, questo storico locale a conduzione familiare detiene la licenza di vendita di alcolici Numero 1 della città rilasciata dopo il Proibizionismo. Offre un'autentica cucina tradizionale tedesco-americana in un ambiente maestoso con pannelli di legno scuro e dettagli d'epoca. È il posto ideale per cambiare totalmente sapori: provate l'ottimo Wiener Schnitzel, i bratwurst o il Sauerbraten (lo stracotto di manzo), accompagnandoli con una delle loro birre artigianali storiche o con la famosa Berghoff Root Beer analcolica. $25–40 a persona.",
     "dinner_option_3_name": "The Dearborn",
     "dinner_option_3_detail": "145 N Dearborn St. <a href=\"https://www.thedearborntavern.com\" target=\"_blank\">thedearborntavern.com</a> Una raffinata Urban Tavern nel cuore del Theatre District, gestita da due sorelle di origine irlandese. Il locale è elegante e vivace, caratterizzato da grandi divani in pelle e imponenti lampadari di design. La cucina è un perfetto esempio di ristorazione americana contemporanea: il loro Fish & Chips (fatto con pastella alla birra) è considerato uno dei migliori della città, ma il menu spazia da piatti di pasta fresca a frutti di mare e tagli di carne eccellenti. Ottima anche la carta dei cocktail artigianali. È la scelta ideale per una cena più curata e d'atmosfera. $35–70 a persona.",
-
     "close_text": "Questo è il primo giorno. Avete trovato il vostro ritmo, assaggiato la vera Chicago e cominciato a capire la città. Ma c'è ancora molto da scoprire. Il secondo e il terzo giorno saranno quelli dove comprenderete davvero di cosa è fatta questa città.",
-
-	"locked_title": "Il tuo itinerario completo ti<br><em>sta aspettando.</em>",
-	"locked_desc": "Compila il questionario e ricevi un itinerario di viaggio personalizzato completo, costruito interamente attorno alla tua situazione — la tua destinazione, i tuoi interessi, il tuo stile di viaggio.",
+    "locked_title": "Il tuo itinerario completo ti<br><em>sta aspettando.</em>",
+    "locked_desc": "Compila il questionario e ricevi un itinerario di viaggio personalizzato completo, costruito interamente attorno alla tua situazione — la tua destinazione, i tuoi interessi, il tuo stile di viaggio.",
     "locked_plan_escape_name": "Escape",
     "locked_plan_escape_price": "$99 · a viaggio",
     "locked_plan_escape_was": "$109",
@@ -94,5 +79,5 @@
     "locked_plan_immerse_price": "$249 · a viaggio",
     "locked_plan_immerse_was": "$279",
     "locked_plan_immerse_features": "8-14 giorni · supporto offline 60 giorni ·<br>3 round di revisione · risposta entro 72h",
-	"locked_cta": "Vedi piani &amp; inizia &#8594;"
+    "locked_cta": "Vedi piani &amp; inizia &#8594;"
 }

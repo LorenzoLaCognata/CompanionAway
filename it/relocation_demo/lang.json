@@ -4,11 +4,9 @@
     "head_meta_keywords": "esempio guida al trasferimento, guida expat di esempio, demo guida trasloco personalizzata, cosa contiene una guida al trasferimento, anteprima guida per trasferirsi all'estero",
     "head_og_title": "Companion Away — Una guida al trasferimento costruita attorno a te",
     "head_og_description": "Ecco come potrebbe essere la tua guida al trasferimento — su misura per la tua destinazione, la tua tabella di marcia e la tua vita. Non un modello generico. Una guida che conosce il tuo trasferimento.",
-
     "header_banner_text": "<strong>Stai visualizzando una guida di esempio gratuita.</strong> Esplora la demo per avere un'idea di quello che riceverai secondo la tue richieste e preferenze.",
     "header_banner_cta": "Vedi piani &amp; prezzi &#8594;",
     "header_back_label": "Torna alla homepage",
-
     "sidebar_logo": "Companion Away",
     "sidebar_sub": "Guida al Trasferimento",
     "sidebar_label_guide": "La tua guida",
@@ -26,7 +24,6 @@
     "sidebar_nav_checklist": "Checklist Centrale",
     "sidebar_nav_inventory": "Inventario Trasferimento",
     "sidebar_progress_label": "Progresso Checklist",
-
     "locked_title": "La tua guida completa ti<br><em>sta aspettando.</em>",
     "locked_desc": "Compila il questionario, scegli il tuo piano e ricevi una guida al trasferimento completa e personalizzata, costruita interamente attorno alla tua situazione — la tua città, la tua tabella di marcia, le tue preoccupazioni.",
     "locked_plan_settler_name": "Settler",
@@ -38,7 +35,6 @@
     "locked_plan_roots_was": "$269",
     "locked_plan_roots_features": "Guida completa · supporto offline 90 giorni · 2 revisioni · risposte entro 48h",
     "locked_cta": "Scopri i piani e inizia &#8594;",
-
     "overview_eyebrow": "Sezione 1",
     "overview_title": "<em>Panoramica personale</em>",
     "overview_intro": "Un riepilogo della tua situazione basato su ciò che hai condiviso — così partiamo dallo stesso punto.",
@@ -56,7 +52,6 @@
     "overview_value_worry": "«Non so da dove iniziare con tutta questa burocrazia.»",
     "overview_note_label": "La nota personale di Giulia",
     "overview_note_text": "Ho letto tutto quello che hai condiviso e ho un quadro chiaro della tua situazione. L'ansia per la burocrazia è assolutamente normale — ed è esattamente per questo che ho strutturato questa guida attorno alla tua timeline e alle tue priorità specifiche. Inizia dalla Sezione 2 e segui l'ordine. Sono qui se hai bisogno.",
-
     "before_eyebrow": "Sezione 2",
     "before_title": "<em>Prima di arrivare</em>",
     "before_intro": "Le cose da sistemare mentre sei ancora nel tuo paese d'origine — documenti da raccogliere, conti da notificare e servizi da chiudere o sospendere prima della partenza. Spunta ogni voce man mano che la completi.",
@@ -75,7 +70,6 @@
     "before_item6_tag": "Se applicabile",
     "before_item7_text": "<strong>Documenti finanziari</strong> — dichiarazioni dei redditi degli ultimi 3 anni, estratti conto recenti, prova dei risparmi. Possono essere richiesti dai proprietari di casa e da alcune banche americane.",
     "before_item7_tag": "Consigliato",
-
     "timeline_eyebrow": "Sezione 3",
     "timeline_title": "<em>La tua tabella di marcia</em>",
     "timeline_intro": "Una roadmap chiara e ordinata di cosa fare e quando. Ogni voce rimanda alla sezione di approfondimento per tutti i dettagli. Non cercare di fare tutto in una volta — segui questa sequenza.",
@@ -95,7 +89,6 @@
     "timeline_block2_task3_link": "Sezione 6",
     "timeline_block2_task4": "<strong>Patente di guida</strong> — scarica e studia il Manuale del Conducente del tuo stato, prenota il test teorico.",
     "timeline_block2_task4_link": "Sezione 7",
-
     "banking_eyebrow": "Sezione 4",
     "banking_title": "<em>Banca</em>",
     "banking_intro": "Due cose definiscono la tua vita finanziaria negli Stati Uniti dal primo giorno: il tuo conto bancario e il tuo credit score.<br>In Italia, la tua capacità di affittare o prendere un prestito si basa su reddito e contratto di lavoro. Negli Stati Uniti, si basa sul tuo credit score — e tu parti da zero.",
@@ -106,7 +99,6 @@
     "banking_step2_desc": "Wise ti permette di tenere USD e fare trasferimenti senza un conto bancario negli USA — utile le prime settimane mentre prepari un conto vero.<br>Non è un conto bancario negli USA ma funziona per le spese quotidiane e i trasferimenti EUR→USD a tassi molto migliori rispetto al tuo bonifico internazionale da casa.",
     "banking_step3_title": "Quando arriva l'SSN — aggiorna il tuo conto bancario",
     "banking_step3_desc": "Vai alla tua banca e aggiungi il tuo SSN per sbloccare tutte le funzioni del conto: limiti di trasferimento più alti, accesso alle carte di credito, e tipi di conto migliori.",
-
     "healthcare_eyebrow": "Sezione 5",
     "healthcare_title": "<em>Sanità</em>",
     "healthcare_intro": "Questa è la sezione che sorprende ogni italiano che si trasferisce negli Stati Uniti. Vieni da un paese dove la sanità è un diritto costituzionale, finanziato dalle tasse, gratuito al momento dell'uso. Il sistema americano funziona completamente diversamente.",
@@ -133,7 +125,6 @@
     "healthcare_row6_us": "Piano medio del datore di lavoro: $400–800/mese in premi (il datore paga la maggior parte). Più franchigia + copay.",
     "healthcare_warning_label": "&#9888;&#65039; Non restare mai senza assicurazione",
     "healthcare_warning_text": "Una sola notte in un ospedale americano senza assicurazione: $10,000–50,000. Un braccio rotto: $3,000–7,000. Una visita al pronto soccorso: $1,500–5,000. Finché l'assicurazione americana non è attiva, mantieni almeno una polizza di assicurazione da viaggio che copra emergenze mediche.",
-
     "housing_eyebrow": "Sezione 6",
     "housing_title": "<em>Alloggio</em>",
     "housing_intro": "Come funziona l'affitto negli Stati Uniti — e cosa è diverso dall'Italia. Personalizzato per la tua città, il tuo budget, e quello che mi hai raccontato.",
@@ -161,19 +152,15 @@
     "housing_row7_aspect": "Animali domestici",
     "housing_row7_italy": "Più flessibili, negoziabili.",
     "housing_row7_us": "Gli edifici sono esplicitamente pet-friendly o no. Deposito animali solitamente richiesto ($200–500).",
-
     "driving_eyebrow": "Sezione 7",
     "driving_title": "<em>Patente &amp; Trasporti</em>",
     "driving_intro": "Ottenere la patente negli USA è uno dei passi più importanti nei primi mesi — nella maggior parte delle città americane, inclusa Minneapolis, un'auto è essenziale per la vita quotidiana. Il processo varia da stato a stato.",
-
     "daily_eyebrow": "Sezione 8",
     "daily_title": "<em>Vita Quotidiana</em>",
     "daily_intro": "Le piccole cose di cui nessuno ti avverte — i culture shock, le differenze pratiche, le cose che ti fanno sentire perso al supermercato alle 9 di sera.",
-
     "community_eyebrow": "Sezione 9",
     "community_title": "<em>Comunità &amp; Vita da Expat</em>",
     "community_intro": "Questa è la sezione di cui nessuno parla abbastanza. La burocrazia è difficile, ma la solitudine è più difficile. Costruire una vita da zero impiega tempo — ed è completamente normale.",
-
     "checklist_eyebrow": "Sezione 10",
     "checklist_title": "<em>Checklist Centrale</em>",
     "checklist_intro": "Ogni azione da questa guida in un unico posto, ordinata temporalmente. Spunta gli elementi man mano che procedi."

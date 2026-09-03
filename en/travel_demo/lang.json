@@ -1,24 +1,20 @@
 {
-	"head_title": "Companion Away — Sample Itinerary: Chicago",
-	"head_meta_description": "Explore a sample travel itinerary from Companion Away — see how we turn your destination, interests, and travel style into a personalised itinerary built around you.",
-	"head_meta_keywords": "travel itinerary example, sample trip guide, personalised travel itinerary demo, what's in a travel itinerary, Chicago travel guide preview",
-	"head_og_title": "Companion Away — A Travel Itinerary Built Around You",
-	"head_og_description": "This is what your travel itinerary could look like — tailored to your destination, your interests, and your travel style. Not a template. An itinerary that knows your need.",
-
-	"header_banner_text": "<strong>You are viewing a free sample itinerary.</strong> Explore the demo to get an idea of what you will receive based on your requests and preferences.",
-	"header_banner_cta": "See plans &amp; pricing &#8594;",
-	"header_back_label": "Back to homepage",
-
-	"sidebar_logo": "Companion Away",
-	"sidebar_sub": "Travel Itinerary",
-	"sidebar_label_guide": "Your Itinerary",
-	"sidebar_nav_day_1": "Day 1",
-	"sidebar_nav_day_2": "Day 2",
-	"sidebar_nav_day_3": "Day 3",
-
+    "head_title": "Companion Away — Sample Itinerary: Chicago",
+    "head_meta_description": "Explore a sample travel itinerary from Companion Away — see how we turn your destination, interests, and travel style into a personalised itinerary built around you.",
+    "head_meta_keywords": "travel itinerary example, sample trip guide, personalised travel itinerary demo, what's in a travel itinerary, Chicago travel guide preview",
+    "head_og_title": "Companion Away — A Travel Itinerary Built Around You",
+    "head_og_description": "This is what your travel itinerary could look like — tailored to your destination, your interests, and your travel style. Not a template. An itinerary that knows your need.",
+    "header_banner_text": "<strong>You are viewing a free sample itinerary.</strong> Explore the demo to get an idea of what you will receive based on your requests and preferences.",
+    "header_banner_cta": "See plans &amp; pricing &#8594;",
+    "header_back_label": "Back to homepage",
+    "sidebar_logo": "Companion Away",
+    "sidebar_sub": "Travel Itinerary",
+    "sidebar_label_guide": "Your Itinerary",
+    "sidebar_nav_day_1": "Day 1",
+    "sidebar_nav_day_2": "Day 2",
+    "sidebar_nav_day_3": "Day 3",
     "note_personal": "Every choice in this guide comes from a genuine understanding of what you are looking for: food culture, not Instagram trends. Authentic places where locals actually go, rather than tourist traps. This guide has been built specifically for you.",
     "note_timing": "The schedule below is purely a guideline — feel free to follow it or completely ignore it. If you prefer to spend the afternoon resting instead of walking, go right ahead. If you want to linger longer at lunch, you are free to do so. Everything is flexible.",
-
     "overview_label": "Your day overview",
     "overview_morning": "Morning:",
     "overview_morning_text": "Arrival at the hotel, stroll through the West Loop neighborhood",
@@ -28,7 +24,6 @@
     "overview_afternoon_text": "Rest at the hotel, stroll through the historic Loop neighborhood",
     "overview_dinner": "Dinner",
     "overview_dinner_text": "near the hotel",
-
     "info_box_label": "From your questionnaire",
     "info_destination_label": "Departure and Destination",
     "info_destination_value": "Milan - Chicago O'Hare",
@@ -42,15 +37,11 @@
     "info_priority_value": "Food culture, local spots",
     "info_pace_label": "Pace",
     "info_pace_value": "Relaxed",
-
     "day_title": "Friday, July 19",
-
     "arrival_time": "9:00 AM – Arrival",
     "arrival_text": "The plane lands at 9:00 AM. To get Downtown, you can easily take the Blue Line (trains depart from the terminal every 5–10 minutes, the fare is $5 per person, and the journey to the city center takes about 45 minutes).If you arrive at Terminals 1, 2, or 3 (an option that includes anyone laying over in Dublin—the only European airport with US Preclearance—or flying with a domestic connection within the United States), you will land just like a domestic passenger. Once you collect any checked bags from your arrival terminal's baggage claim, you will already be in the public pre-security area. From here, simply follow the signs for 'CTA Trains' or 'Trains to City' and take the escalators down to the lower level of Terminal 2. The indoor pedestrian tunnels, equipped with moving walkways, lead directly to the subway turnstiles in less than a 10-minute walk.On the other hand, if you arrive at Terminal 5 for International flights, you must go through the US immigration line, collect your bags, and clear customs upon arrival in Chicago. Once you exit the customs doors, you will need to go upstairs and take the ATS (Airport Transit System)—the free elevated monorail that runs every few minutes. Get off at the Terminal 2 stop, enter the airport, and follow the 'CTA Trains' signs and the directions described above.The closest stop to your hotel is Monroe, and the hotel is about a 300-meter (around 1,000 feet) walk from there. Depending on whether you need to go through customs or not, you will arrive at the hotel in the late morning and can leave your luggage at the front desk, as check-in begins at 3:00 PM.",
-
     "west_loop_time": "11:00 AM – West Loop",
     "west_loop_text": "Once you have left your luggage at the hotel, you can enjoy a scenic half-hour stroll toward the West Loop, the true beating heart of Chicago’s food culture. Turning onto Michigan Avenue from the hotel, walk north for two blocks until you reach the river bridge. From there, take the stairs down to join the Riverwalk and continue west along the riverbank: this pedestrian path is spectacular, dotted with bars and art installations, all shaded by the skyscrapers. Follow the path to the end, where the river splits into three branches at Wolf Point and the Salesforce Tower, then take the stairs back up to street level on Wacker Drive.Cross the river heading west on the Lake Street bridge – enjoying the view of the mammoth, historic Merchandise Mart – and turn onto W Fulton Street. Walking along this street, you will find yourself right in the middle of Fulton Market’s old red-brick warehouses. This is the area’s most authentic soul: a mix of small local producers, historic shops where top restaurants source their ingredients every morning, and independent art galleries. This is the spot where chefs themselves sit down to eat after their shifts. Take your time. You aren't just sightseeing; you are discovering how this city thinks about and experiences food.",
-
     "lunch_time": "1:00 PM – Lunch",
     "lunch_intro": "To start discovering Chicago’s true food scene, here are three different options. They are all right in the West Loop neighborhood where you are walking. Each one tells you something different about the food culture in this city.",
     "lunch_option_1_name": "Green Street Smoked Meats",
@@ -59,16 +50,12 @@
     "lunch_option_2_detail": "800 W Randolph St. <a href=\"https://www.auchevaldiner.com/chicago/home\" target=\"_blank\">auchevaldiner.com</a> Chicago's legendary burger. Forget fast food: here, the cheeseburger is elevated to a culinary work of art, featuring thick-cut, date-glazed bacon and a fried egg. This is the spot that redefined the American diner scene. No reservations are accepted, and the lines out the door are part of the experience, but waiting at the dimly lit counter, surrounded by a jazz and retro vibe, is worth every single minute. $30–45 per person.",
     "lunch_option_3_name": "Avec",
     "lunch_option_3_detail": "615 W Randolph St. <a href=\"https://www.avecrestaurant.com\" target=\"_blank\">avecrestaurant.com</a> An intimate and vibrant haven, where the dark wood walls create the illusion of being inside a modern wine barrel. The kitchen serves up Mediterranean-inspired small plates designed to be shared in the center of the table, like their famous chorizo-stuffed dates wrapped in bacon. Take a seat at the counter, order a glass from a curated selection of artisanal wines, and just take your time. This is the perfect spot for a relaxed yet highly sophisticated dinner. $55–80 per person.",
-
     "back_hotel_time": "2:30 PM – Back to Hotel",
     "back_hotel_text": "Take your time heading back to the hotel along a completely different route from your walk there, allowing you to discover the historic and monumental soul of the city center. Walk east along W Randolph Street, a historic, tree-lined avenue that seamlessly connects the West Loop to the financial district. Continuing east, you will cross the Chicago River on the monumental Randolph Street bascule bridge, which offers an incredible photo opportunity with the skyscrapers reflecting in the water.Once across the river, you will officially enter the majestic 'canyons' of the Loop, walking beneath the historic iron structure of the elevated subway (the famous 'L') at the intersection with Wells Street: the clattering of the trains overhead is the most authentic soundtrack to Chicago. Keep moving along Randolph Street and you will walk right into the heart of the Theatre District, passing beneath the monumental neon marquees of the Cadillac Palace and the celebrated Nederlander Theatre.After passing the theatre district and crossing State Street, the final block will bring you triumphantly out onto Michigan Avenue. Turn right, and just a few steps later, you will be back at the entrance of your hotel, right across from the evening lights of Millennium Park.",
-
     "rest_time": "3:00 PM – Rest",
     "rest_text": "Check in officially, take a shower, and relax. It is entirely up to you whether you prefer to get some extra rest or head back out to explore some more.",
-
     "river_north_time": "4:30 PM – Loop",
     "river_north_text": "Spend the rest of the afternoon on a casual stroll through the Loop, the historic neighborhood where you are staying, to begin getting a feel for the city. Stepping out of the hotel, you will find yourself on Michigan Avenue: make no plans, simply start walking among the majestic skyscrapers and wandering down the neighborhood’s inner streets. Look up at the historic iron framework of the elevated subway looping overhead, browse through local cafés, discover hidden courtyards, and admire the massive public art sculptures that pop up between the buildings—you will breathe in the real atmosphere of the city. No rigid schedules, no timelines. Just walk, explore, and observe.",
-
     "dinner_time": "8:00 PM – Dinner",
     "dinner_intro": "Three options, each revealing something unique about Chicago's rich food culture.",
     "dinner_option_1_name": "Lou Malnati's Pizzeria",
@@ -77,11 +64,9 @@
     "dinner_option_2_detail": "17 W Adams St. <a href=\"https://theberghoff.com\" target=\"_blank\">theberghoff.com</a> A dive into Chicago's history. Open since 1898, this historic, family-run establishment holds the city's 'Number 1' liquor license issued right after Prohibition. It offers authentic, traditional German-American cuisine in a majestic setting complete with dark wood paneling and vintage details. It is the ideal spot to switch up your flavors completely: try the excellent Wiener Schnitzel, the bratwurst, or the Sauerbraten (marinated pot roast), pairing them with one of their historic craft beers or the famous non-alcoholic Berghoff Root Beer. $25–40 per person.",
     "dinner_option_3_name": "The Dearborn",
     "dinner_option_3_detail": "145 N Dearborn St. <a href=\"https://www.thedearborntavern.com\" target=\"_blank\">thedearborntavern.com</a> A sophisticated 'Urban Tavern' in the heart of the Theatre District, run by two sisters of Irish descent. The space is both elegant and lively, featuring large leather booths and striking designer chandeliers. The kitchen serves up a perfect example of contemporary American dining: their beer-battered Fish & Chips is considered one of the best in the city, but the menu ranges from fresh pasta dishes to excellent seafood and premium cuts of meat. The craft cocktail list is equally outstanding. It is the ideal choice for a more curated and atmospheric dinner. $35–70 per person.",
-
     "close_text": "This is day one. You have found your rhythm, tasted the real Chicago, and begun to understand the city. But there is still so much more to discover. Day two and day three will be when you truly comprehend what this city is made of.",
-
-	"locked_title": "Your full itinerary is<br><em>waiting for you.</em>",
-	"locked_desc": "Fill in the questionnaire and receive a complete personalised travel itinerary built entirely around your situation — your destination, your interests, your travel style.",
+    "locked_title": "Your full itinerary is<br><em>waiting for you.</em>",
+    "locked_desc": "Fill in the questionnaire and receive a complete personalised travel itinerary built entirely around your situation — your destination, your interests, your travel style.",
     "locked_plan_escape_name": "Escape",
     "locked_plan_escape_price": "$99 · per trip",
     "locked_plan_escape_was": "$109",
@@ -94,5 +79,5 @@
     "locked_plan_immerse_price": "$249 · per trip",
     "locked_plan_immerse_was": "$279",
     "locked_plan_immerse_features": "8-14 days · 60-day offline support ·<br>3 revision round · replies within 72h",
-	"locked_cta": "See plans &amp; get started &#8594;"
+    "locked_cta": "See plans &amp; get started &#8594;"
 }

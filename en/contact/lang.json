@@ -4,16 +4,12 @@
     "head_meta_keywords": "contact companion away, relocation questions, travel planning contact, get in touch",
     "head_og_title": "Contact — Companion Away",
     "head_og_description": "Have a question before you start? Send a message and I'll get back to you personally.",
-
-    "header_logo": "Companion Away",
     "hero_eyebrow": "Get in touch",
     "hero_title_plain": "Let's",
     "hero_title_em": "talk.",
     "hero_subtitle": "Questions about relocating, travel planning, or how this all works? Send a message and I'll reply personally.",
     "hero_note": "I read every message myself — no bots, no templates.",
-
     "btn_send": "Send message →",
-
     "contact_title_plain": "Send a",
     "contact_title_em": "message",
     "contact_desc": "Share a few details and what's on your mind — I'll get back to you as soon as I can.",
@@ -25,13 +21,9 @@
     "contact_email_placeholder": "your@email.com",
     "contact_phone_label": "Phone (optional)",
     "contact_phone_placeholder": "+1 or +39...",
-    "contact_location_label": "Where are you currently based? *",
-    "contact_location_placeholder": "City, Country — e.g. Milan, Italy",
     "contact_message_label": "Your message *",
     "contact_message_placeholder": "What would you like to know?",
-
     "error_submission": "Something went wrong sending your message. Please try again in a moment, or email contact@companionaway.com directly.",
-
     "thankyou_title_plain": "Message sent,",
     "thankyou_title_em": "thank you.",
     "thankyou_sub": "I've received your message and I'll get back to you soon."
