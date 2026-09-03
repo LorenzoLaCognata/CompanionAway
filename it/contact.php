@@ -14,7 +14,10 @@
 
 	$i = isset($_GET['step']) ? (int) $_GET['step'] : 1;
 	$submissionError = false;
-	
+	if ($_SERVER['REQUEST_METHOD'] !== 'POST' && $i === 1) {
+		$_SESSION['form_started_at'] = time();
+	}
+
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 		$action = $_POST['action'] ?? 'next';
@@ -33,7 +36,10 @@
 		
 		if ($action === 'submit') {
 
-			if (empty($_POST['website'])) {
+			$formStartedAt = $_SESSION['form_started_at'] ?? 0;
+			$formElapsed = time() - $formStartedAt;
+
+			if (empty($_POST['website']) && $formStartedAt > 0 && $formElapsed >= 3) {
 
 				$firstName = $_SESSION['data']['firstName'] ?? '';
 				$lastName = $_SESSION['data']['lastName'] ?? '';
