@@ -14,6 +14,7 @@
 
 	$i = isset($_GET['step']) ? (int) $_GET['step'] : 1;
 	$submissionError = false;
+
 	if ($_SERVER['REQUEST_METHOD'] !== 'POST' && $i === 1) {
 		$_SESSION['form_started_at'] = time();
 	}
@@ -92,6 +93,7 @@
 
 				if ($dbSaved || $mailSent) {
 					unset($_SESSION['data']);
+					unset($_SESSION['form_started_at']);
 					header('Location: ' . $currentPage . '?step=' . ($i+1));
 					exit;
 				} else {
